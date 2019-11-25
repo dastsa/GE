@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+.App-button{
+  background-color: transparent;
+  color: white;
+  font: small-caps normal 400 16px/22px Verdana;
+  border: 2px solid rgba(158,119,80,0.72);
+  border-radius: 80px;
+  font-weight: bold;
+  font-size: 120%;
+}
+.App-titulo{
+  color: white;
+  margin-top: 10%;
+  font: small-caps normal 400 16px/22px Verdana;
+  font-weight: bold;
+  font-size: 200%;
+}
+.App-subtitulo{
+  color: white;
+  margin-top: 4%;
+  font: small-caps normal 400 16px/22px Verdana;
+  font-weight: bold;
+  font-size: 100%;
+}
+.App-link {
+  color: #09d3ac;
+}
+.App-header{
+  background: linear-gradient(rgba(0,1,23), rgba(0,37,70));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  position: absolute;
+  bottom: 0em;
+}
