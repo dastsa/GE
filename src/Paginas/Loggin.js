@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logo from '../imagenes/cuadros logo.png'
 
 class Loggin extends Component {
   constructor(props) {
@@ -22,22 +23,44 @@ class Loggin extends Component {
       this.setState(newState);
     }
   }
+
   render() {
     return (
-      <div class="container h-80">
-        <div class="row align-items-center h-100">
-          <div class="col-3 mx-auto">
-            <div class="text-center">
-              <p id="profile-name" class="profile-name-card"></p>
-              <form class="form-signin">
-              <input type="user" name="user" id="inputUser" class="form-control form-group" placeholder="user" required autofocus />
-                <input type="password" name="password" id="inputPassword" class="form-control form-group" placeholder="password" required />
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">enter</button>
-              </form>
-            </div>
+
+      <div className="App-header">
+        <div className="container-contact100">
+
+          <div className="row">
+            <img src={logo} Style="width: 100%; height: 100%;" alt="img" />
+          </div>
+
+
+
+
+          <div className="wrap-contact100">
+            <form className="col-" action="">
+
+              <div className="form-group">
+                <h3 className="App-subtitulo2">USUARIO</h3>
+                <input type="user" name="user" id="inputUser" className="Input-Style form-control form-group" placeholder="Digite su nombre de usuario" required autofocus />
+              </div>
+
+              <div className="form-group">
+                <h3 className="App-subtitulo2">PASSWORD</h3>
+                <input className="Input-Style form-control form-group" type="password" name="password" id="inputPassword" placeholder="Digite su contraseña" required />
+              </div>
+
+              <div className="form-group">
+                <button className="Btn-aceptar" type="submit"></button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
+
+       
+
+
     );
   }
 }

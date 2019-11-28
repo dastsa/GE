@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
-import Acudientes from "./SubAcudientes";
+//import Acudientes from "./SubAcudientes";
+import logo from '../../imagenes/cuadros logo.png'
 
 class Jugadores extends Component {
     constructor() {
@@ -70,317 +71,346 @@ class Jugadores extends Component {
     };
     render() {
         return (
-            <div className=" justify-content-center pt-2">
-                <div className="col">
-                    <div className="card">
-                        <div className="card-block">
-                            <div className="card-body">
-                                <div className="row justify-content-center">
-                                    <div className="col">
-                                        <form action="">
-                                            <div id="seccion1">
-                                                <div className="form-group">
-                                                    <label for="tipoDoc">Tipo de documento:</label>
-                                                    <select id="tipoDoc" className="form-control">
-                                                        <option selected>Elige...</option>
-                                                        <option>...</option>
-                                                    </select>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="nroI">Nro de documento:</label>
-                                                    <input type="text" className="form-control" id="nroI" placeholder="Numero de documento de identidad" name="nroI" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="ciudad">Lugar de expedición:</label>
-                                                    <input type="text" className="form-control" id="lugarEx" placeholder="Ciudad" name="lugarEx" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="fechaEx">Fecha de expedición:</label>
-                                                    <input type="date" className="form-control" id="fechaEx" name="fechaEx" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="fechaNac">Fecha de nacimiento:</label>
-                                                    <input type="date" className="form-control" id="fechaNac" name="fechaNac" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <button type="button" className="btn btn-primary" onClick={this.ocultar.bind(this)}>Siguiente</button>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:14%">14%</div>
-                                                </div>
-                                            </div>
-                                            <div id="seccion2">
-                                                <div className="form-group">
-                                                    <label for="nomJug">Nombres:</label>
-                                                    <input type="text" className="form-control" id="nomJug" placeholder="Nombre" name="nomJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="apeJug">Apellidos:</label>
-                                                    <input type="text" className="form-control" id="apeJug" placeholder="Apellidos" name="apeJug"
-                                                        required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="ciudadNac">Ciudad de nacimiento:</label>
-                                                    <input type="text" className="form-control" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
-                                                        required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="ciudadNac">Correo electronico:</label>
-                                                    <input type="email" className="form-control" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
-                                                        required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="rh">RH:</label>
-                                                    <select id="rh" className="form-control">
-                                                        <option selected>Elige...</option>
-                                                        <option>...</option>
-                                                    </select>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="epsJug">EPS:</label>
-                                                    <input type="text" className="form-control" id="epsJug" placeholder="EPS" name="epsJug"
-                                                        required />
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.mostrar.bind(this)}>Atras</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.ocultar2.bind(this)}>Siguiente</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:28%">28%</div>
-                                                </div>
-                                            </div>
-                                            <div id="seccion3">
-                                                <div className="form-group">
-                                                    <label for="direccionJug">Direccion:</label>
-                                                    <input type="text" className="form-control" id="direccionJug" placeholder="Direccion" name="direccionJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="barrioJug">Barrio:</label>
-                                                    <input type="text" className="form-control" id="barrioJug" placeholder="Barrio" name="barrioJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="codPostalJug">Codigo postal:</label>
-                                                    <input type="number" className="form-control" id="codPostalJug" placeholder="Codigo postal" name="codPostalJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="website">Estrato:</label>
-                                                    <input type="text" className="form-control" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="website">Telefono fijo:</label>
-                                                    <input type="text" className="form-control" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="website">Celular:</label>
-                                                    <input type="text" className="form-control" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.mostrar2.bind(this)}>Atras</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.ocultar3.bind(this)}>Siguiente</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:42%">42%</div>
-                                                </div>
-                                            </div>
-                                            <div id="seccion4">
-                                                {this.state.acudientes.map((data) => {
-                                                    return (
-                                                        <Acudientes />
-                                                    );
-                                                })
-                                                }
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.mostrar3.bind(this)}>Atras</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.ocultar4.bind(this)}>Siguiente</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:56%">56%</div>
-                                                </div>
-                                            </div>
-                                            <div id="seccion5">
-                                                <div className="form-group">
-                                                    <label for="institucionJug">Institución educativa:</label>
-                                                    <input type="text" className="form-control" id="institucionJug" placeholder="Institución educativa" name="institucionJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="gradoJug">Grado:</label>
-                                                    <select id="gradoJug" className="form-control">
-                                                        <option selected>Elige...</option>
-                                                        <option>...</option>
-                                                    </select>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="jornadaJug">Jornada Entrenamiento:</label>
-                                                    <select id="jornadaJug" className="form-control">
-                                                        <option selected>Elige...</option>
-                                                        <option>Diurna</option>
-                                                        <option>Mixta</option>
-                                                        <option>Nocturna</option>
-                                                    </select>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="pasaporteJug">Pasaporte:</label>
-                                                    <input type="text" className="form-control" id="pasaporteJug" placeholder="Pasaporte" name="pasaporteJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="libreta">Libreta Militar:</label>
-                                                    <input type="text" className="form-control" id="libreta" placeholder="Libreta Militar" name="libreta" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.mostrar4.bind(this)}>Atras</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.ocultar5.bind(this)}>Siguiente</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:70%">70%</div>
-                                                </div>
-                                            </div>
-                                            <div id="seccion6">
-                                                <div className="form-group">
-                                                    <label for="fotoJug">Foto de perfil:</label>
-                                                    <input type="file" className="form-control" id="fotoJug" name="fotoJug" required />
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="tallacJug">Talla de camisa:</label>
-                                                    <select id="gradoJug" className="form-control">
-                                                        <option>S</option>
-                                                        <option>L</option>
-                                                        <option>M</option>
-                                                    </select>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="tallapJug">Talla de pantalón:</label>
-                                                    <select id="tallapJug" className="form-control">
-                                                        <option selected>Elige...</option>
-                                                        <option>S</option>
-                                                        <option>L</option>
-                                                        <option>M</option>
-                                                    </select>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="posicionmJug">Posición principal:</label>
-                                                    <input type="text" className="form-control" id="posicionmJug" placeholder="Posición en el campo" name="posicionmJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="posicionsJug">Posición secundaría:</label>
-                                                    <input type="text" className="form-control" id="posicionsJug" placeholder="Posición secundaría" name="posicionsJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.mostrar5.bind(this)}>Atras</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.ocultar6.bind(this)}>Siguiente</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:84%">84%</div>
-                                                </div>
-                                            </div>
-                                            <div id="seccion7">
-                                                <div className="form-group">
-                                                    <label for="posicionmJug">Becado:</label>
-                                                    <input type="number" className="form-control" id="posicionmJug" placeholder="Digite el porcentaje de la beca" name="posicionmJug" required />
-                                                    <div className="valid-feedback">Validado.</div>
-                                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="button" className="btn btn-primary" onClick={this.mostrar6.bind(this)}>Atras</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div className="form-group">
-                                                            <button type="submit" className="btn btn-primary">Enviar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="progress">
-                                                    <div className="progress-bar" Style="width:100%">100%</div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+            <div className="App-header">
+                <div className="container-contact100 ">
+                    <div className="wrap-contact100">
+                        <form className="col-" action="">
+                            <div id="seccion1">
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="tipoDoc">TIPO DE DOCUMENTO:</label>
+                                    <select id="tipoDoc" className="form-control Input-Style">
+                                        <option selected>Elige...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="nroI">NÚMERO DE DOCUMENTO:</label>
+                                    <input type="text" className="form-control Input-Style" id="nroI" placeholder="Numero de documento de identidad" name="nroI" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="ciudad">LUGAR DE EXPEDICIÓN:</label>
+                                    <input type="text" className="form-control Input-Style" id="lugarEx" placeholder="Ciudad" name="lugarEx" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="fechaEx">FECHA DE EXPEDICIÓN:</label>
+                                    <input type="date" className="form-control Input-Style" id="fechaEx" name="fechaEx" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="fechaNac">FECHA DE NACIMIENTO:</label>
+                                    <input type="date" className="form-control Input-Style" id="fechaNac" name="fechaNac" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:14%">14%</div>
                                 </div>
                             </div>
-                        </div>
+                            <div id="seccion2">
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="nomJug">NOMBRES:</label>
+                                    <input type="text" className="form-control Input-Style" id="nomJug" placeholder="Nombre" name="nomJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="apeJug">APELLIDOS:</label>
+                                    <input type="text" className="form-control Input-Style" id="apeJug" placeholder="Apellidos" name="apeJug"
+                                        required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="ciudadNac">CIUDAD DE NACIMIENTO:</label>
+                                    <input type="text" className="form-control Input-Style" id="ciudadNac" placeholder="Ciudad de nacimiento" name="ciudadNac"
+                                        required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="ciudadNac">CORREO ELECTRÓNICO:</label>
+                                    <input type="email" className="form-control Input-Style" id="ciudadNac" placeholder="Correo electronico" name="ciudadNac"
+                                        required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="rh">RH:</label>
+                                    <select id="rh" className="form-control Input-Style">
+                                        <option selected>Elige...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="epsJug">EPS:</label>
+                                    <input type="text" className="form-control Input-Style" id="epsJug" placeholder="EPS" name="epsJug"
+                                        required />
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.mostrar.bind(this)}>Atras</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.ocultar2.bind(this)}>Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:28%">28%</div>
+                                </div>
+                            </div>
+                            <div id="seccion3">
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="direccionJug">DIRECCIÓN:</label>
+                                    <input type="text" className="form-control Input-Style" id="direccionJug" placeholder="Direccion" name="direccionJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="barrioJug">BARRIO:</label>
+                                    <input type="text" className="form-control Input-Style" id="barrioJug" placeholder="Barrio" name="barrioJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="codPostalJug">CODIGO POSTAL:</label>
+                                    <input type="number" className="form-control Input-Style" id="codPostalJug" placeholder="Codigo postal" name="codPostalJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="website">ESTRATO:</label>
+                                    <input type="text" className="form-control Input-Style" id="website" placeholder="Digite su estrato" name="website" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="website">TELÉFONO FIJO:</label>
+                                    <input type="text" className="form-control Input-Style" id="website" placeholder="Digite su telefono fijo" name="website" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="website">CELULAR:</label>
+                                    <input type="text" className="form-control Input-Style" id="website" placeholder="Número de celular" name="website" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.mostrar2.bind(this)}>Atras</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.ocultar3.bind(this)}>Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:42%">42%</div>
+                                </div>
+                            </div>
+                            <div id="seccion4">
+                             <div className="form-group">
+                                        <label className="App-subtitulo2" for="website">Nombre del Acudiente:</label>
+                                        <input type="text" className="form-control Input-Style" id="website" placeholder="Digite el nombre del acudiente" name="website" required />
+                                        <div className="valid-feedback">Validado.</div>
+                                        <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="App-subtitulo2" for="website">Parentezco:</label>
+                                        <input type="text" className="form-control Input-Style" id="website" placeholder="Digite el parentezco" name="website" required />
+                                        <div className="valid-feedback">Validado.</div>
+                                        <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label className="App-subtitulo2" for="website">Documento Madre:</label>
+                                        <input type="text" className="form-control Input-Style" id="website" placeholder="Digite el nombre del acudiente" name="website"  />
+                                        <div className="valid-feedback">Validado.</div>
+                                        <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="App-subtitulo2" for="website">Nombre madre:</label>
+                                        <input type="text" className="form-control Input-Style" id="website"  placeholder="Digite el parentezco" name="website"  disabled="disabled"/>
+                                        <div className="valid-feedback">Validado.</div>
+                                        <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                       
+
+                                    <div className="form-group">
+                                        <label className="App-subtitulo2" for="website">Documento padre:</label>
+                                        <input type="text" className="form-control Input-Style" id="website" placeholder="Digite el nombre del acudiente" name="website"  />
+                                        <div className="valid-feedback">Validado.</div>
+                                        <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="App-subtitulo2" for="website">Nombre padre:</label>
+                                        <input type="text" className="form-control Input-Style" id="website" placeholder="Digite el parentezco" name="website" disabled="disabled" />
+                                        <div className="valid-feedback">Validado.</div>
+                                        <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                    </div>
+                       
+                       
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.mostrar3.bind(this)}>Atras</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.ocultar4.bind(this)}>Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:56%">56%</div>
+                                </div>
+                            </div>
+                            <div id="seccion5">
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="institucionJug">INSTITUCIÓN EDUCATIVA:</label>
+                                    <input type="text" className="form-control Input-Style" id="institucionJug" placeholder="Institución educativa" name="institucionJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="gradoJug">GRADO:</label>
+                                    <select id="gradoJug" className="form-control Input-Style">
+                                        <option selected>Elige...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="jornadaJug">JORNADA ENTRENAMIENTO:</label>
+                                    <select id="jornadaJug" className="form-control Input-Style">
+                                        <option selected>Elige...</option>
+                                        <option>Diurna</option>
+                                        <option>Mixta</option>
+                                        <option>Nocturna</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="pasaporteJug">PASAPORTE:</label>
+                                    <input type="text" className="form-control Input-Style" id="pasaporteJug" placeholder="Pasaporte" name="pasaporteJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="libreta">LIBRETA MILITAR:</label>
+                                    <input type="text" className="form-control Input-Style" id="libreta" placeholder="Libreta Militar" name="libreta" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.mostrar4.bind(this)}>Atras</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.ocultar5.bind(this)}>Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:70%">70%</div>
+                                </div>
+                            </div>
+                            <div id="seccion6">
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="fotoJug">FOTO DE PERFIL:</label>
+                                    <input type="file" className="form-control Input-Style" id="fotoJug" name="fotoJug" required />
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="tallacJug">TALLA DE CAMISA:</label>
+                                    <select id="gradoJug" className="form-control Input-Style">
+                                        <option>S</option>
+                                        <option>L</option>
+                                        <option>M</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="tallapJug">TALLA DE PANTALÓN:</label>
+                                    <select id="tallapJug" className="form-control Input-Style">
+                                        <option selected>Elige...</option>
+                                        <option>S</option>
+                                        <option>L</option>
+                                        <option>M</option>
+                                    </select>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="posicionmJug">POSICIÓN PRINCIPALl:</label>
+                                    <input type="text" className="form-control Input-Style" id="posicionmJug" placeholder="Posición en el campo" name="posicionmJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="posicionsJug">POSICIÓN SECUNDARIA:</label>
+                                    <input type="text" className="form-control Input-Style" id="posicionsJug" placeholder="Posición secundaría" name="posicionsJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.mostrar5.bind(this)}>Atras</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.ocultar6.bind(this)}>Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:84%">84%</div>
+                                </div>
+                            </div>
+                            <div id="seccion7">
+                                <div className="form-group">
+                                    <label className="App-subtitulo2" for="posicionmJug">BECADO:</label>
+                                    <input type="number" className="form-control Input-Style" id="posicionmJug" placeholder="Digite el porcentaje de la beca" name="posicionmJug" required />
+                                    <div className="valid-feedback">Validado.</div>
+                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="button" className="Btn-aceptar" onClick={this.mostrar6.bind(this)}>Atras</button>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div className="form-group">
+                                            <button type="submit" className="Btn-aceptar">Enviar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="progress">
+                                    <div className="progress-bar Input-Style" Style="width:100%">100%</div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+
         );
     }
 }

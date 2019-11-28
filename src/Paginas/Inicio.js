@@ -20,7 +20,7 @@ class Inicio extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='blurred-container'>
+                <div className="qwerty blurred-container">
                     <div className="motto">
                         <div>
                             <div className="col">
