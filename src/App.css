@@ -152,6 +152,11 @@
   padding: 30px 55px 30px 55px;
 }
 
+.fondo{
+    background-repeat: no-repeat;
+  background-image: url("../src/imagenes/cuadros.png");
+}
+
 
 
 
@@ -211,7 +216,7 @@ a, a:hover, a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    background: #26262C;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -241,6 +246,8 @@ a, a:hover, a:focus {
     align-items: stretch;
     perspective: 1500px;
 }
+
+
 
 
 #sidebar {

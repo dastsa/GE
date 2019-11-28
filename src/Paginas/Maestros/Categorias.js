@@ -9,16 +9,9 @@ class Categorias extends Component {
         $("#seccion2 , #seccion3").hide();
     };
     render() {
-        return (
-
-            <div className="App-header">
-                <div className="container-contact100">
-                    <div className="row">
-                        <img src={logo} Style="width: 100%; height: 100%;" alt="logo" />
-                    </div>
+        return (       
                     <div className="container-contact100">
                         <form className='col-' action="">
-
                             <div className="form-group">
                                 <label for="generoCat" className="App-subtitulo2">GENERO DE LA CATEGORÍA:</label>
                                 <select id="generoCat" className="Input-Style form-control form-group">
@@ -67,13 +60,6 @@ class Categorias extends Component {
                             </div>
                         </form>
                     </div>
-
-                </div>
-
-            </div>
-
-
-
         );
     }
 }
