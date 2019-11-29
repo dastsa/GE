@@ -192,7 +192,14 @@ class Page extends Component {
                                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                             <ul class="nav navbar-nav ml-auto">
                                                 <li class="nav-item active">
-                                                    <a class="nav-link" href="#">Inicio</a>
+                                                <div className="row">
+                                                    <div className="col-xs-6 col-md-4">
+                                                        <img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" />
+                                                    </div>
+                                                    <div className=".col-xs-12 col-md-8 align-items-md-center" Style="text-align:center">
+                                                        <p className="App-subtitulo align-items-md-center" Style="text-align:center">Cristiano Ronaldo</p>
+                                                    </div>
+                                                </div>
                                                 </li>
                                             </ul>
                                         </div>

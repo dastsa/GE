@@ -27,11 +27,12 @@ class Acudientes extends Component {
     };
     render() {
         return (
-            <div class="container-fluid ">
-                <div className="row">
+            <div class="container-fluid">
+                <div className="container-contact100 ">
+
                     <form className="container-contact100 " action="">
                         <div id="seccion1">
-                            <div className="form-group ">
+                            <div className="form-group">
                                 <label for="tipoDocP" className="App-subtitulo2">TIPO DE DOCUMENTO:</label>
                                 <select id="tipoDoc" className="form-control Input-Style">
                                     <option selected>Elige...</option>
@@ -163,6 +164,7 @@ class Acudientes extends Component {
                         </div>
                     </form>
                 </div>
+
             </div>        
         );
     }
