@@ -37,7 +37,7 @@ class Page extends Component {
                 <div className="row">
                     <div className="col-12">
                         <div className="wrapper sticky-top">
-                            <nav id="sidebar" className="sticky-top"  Style="overflow-y:scroll; height:600px">
+                            <nav id="sidebar" className="sticky-top style-0"  Style="overflow-y:scroll; height:600px" >
                                 <div class="sidebar-header sticky-top">
                                     <h3 className="App-titulo">Gestion Deportiva</h3>
                                 </div>
@@ -198,9 +198,9 @@ class Page extends Component {
                                         </div>
                                     </div>
                                 </nav>
-                                <div className="container-fluid" >
+                                <div className="container-fluid " >
                                     <div className="row" >
-                                        <div className="col-12" Style="overflow-y:scroll; height:500px" >
+                                        <div className="col-12 style-0 " Style="overflow-y:scroll; height:340px;" >
                                             {this.state.estAcudientes && <Acudientes />}
                                             {this.state.estCategorias && <Categorias />}
                                             {this.state.estEscuelas && <Escuelas />}

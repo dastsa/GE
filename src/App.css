@@ -1,3 +1,6 @@
+
+/* ESTILOS */
+
 .App {
   text-align: center;
 }
@@ -71,7 +74,7 @@
   color: white;
   border-color: #787511;
   background-color: #171721;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-image: linear-gradient(to bottom, rgb(117, 114, 16) 0%, #F3F0A9 100%) 1;
 }
 
@@ -159,35 +162,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*  ESTILOS DE SIDEBAR*/
 
 /*
     DEMO STYLE
@@ -418,14 +393,29 @@ a.article, a.article:hover {
 
 
 
+/* ESTILOS SCROLL*/
 
+.scroll-permanent{
+  overflow-y: scroll;
+}
+.style-0::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
 
+.style-0::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
 
-
-
-
-
-
-
-
-
+.style-0::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: 1px solid;
+  height: 10px;
+  border-radius: 4px;
+}
+.content{
+  height:500px;
+  overflow:auto;
+  
+}
