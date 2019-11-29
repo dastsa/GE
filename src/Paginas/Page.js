@@ -5,6 +5,9 @@ import Logo from '../imagenes/logo20.png';
 import Acudientes from "./Maestros/Acudientes";
 import Categorias from "./Maestros/Categorias";
 import Escuelas from "./Maestros/Escuelas";
+import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
+import Jugadores from "./Maestros/Jugadores";
+import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
 
 class Page extends Component {
     constructor() {
@@ -52,10 +55,10 @@ class Page extends Component {
                                                 <ul id="info">
 
                                                     <li>
-                                                        <a href="#">Personal</a>
+                                                         <a href="#" onClick={this.showAcudientes.bind(this)}>Personal</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Deportiva</a>
+                                                        <a href="#" onClick={this.showCategorias.bind(this)}>Deportiva</a>
                                                     </li>
 
                                                 </ul>
@@ -92,7 +95,7 @@ class Page extends Component {
                                         <a href="#perfilProfesor" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Perfil</a>
                                         <ul class="collapse list-unstyled" id="perfilProfesor">
                                             <li>
-                                                <a href="#">Información</a>
+                                                <a href="#">Información </a>
                                             </li>
                                             <li>
                                                 <a href="#">Formación Academica</a>
@@ -137,7 +140,7 @@ class Page extends Component {
                                         <a href="#adminJugadores" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrar Jugador</a>
                                         <ul class="collapse list-unstyled" id="adminJugadores">
                                             <li>
-                                                <a href="#">Información</a>
+                                                <a href="#" >Información</a>
                                             </li>
                                             <li>
                                                 <a href="#">Papelería</a>
@@ -220,9 +223,9 @@ class Page extends Component {
                                 </nav>
                                 <div className="container-fluid " >
                                     <div className="row" >
-                                        <div className="col-12 style-0 " Style="overflow-y:scroll; height:340px;" >
-                                            {this.state.estAcudientes && <Acudientes />}
-                                            {this.state.estCategorias && <Categorias />}
+                                        <div className="col-12 style-0 " Style="overflow-y:scroll; height:500px;" >
+                                            {this.state.estAcudientes && <InformacionPersonal/>}
+                                            {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                         </div>
                                     </div>
