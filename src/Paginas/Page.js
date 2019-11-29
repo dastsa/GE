@@ -37,7 +37,7 @@ class Page extends Component {
                 <div className="row">
                     <div className="col-12">
                         <div className="wrapper sticky-top">
-                            <nav id="sidebar" className="sticky-top"  Style="overflow-y:scroll; height:600px">
+                            <nav id="sidebar" className="sticky-top style-0"  Style="overflow-y:scroll; height:600px" >
                                 <div class="sidebar-header sticky-top">
                                     <h3 className="App-titulo">Gestion Deportiva</h3>
                                 </div>
@@ -192,15 +192,22 @@ class Page extends Component {
                                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                             <ul class="nav navbar-nav ml-auto">
                                                 <li class="nav-item active">
-                                                    <a class="nav-link" href="#">Inicio</a>
+                                                <div className="row">
+                                                    <div className="col-xs-6 col-md-4">
+                                                        <img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" />
+                                                    </div>
+                                                    <div className=".col-xs-12 col-md-8 align-items-md-center" Style="text-align:center">
+                                                        <p className="App-subtitulo align-items-md-center" Style="text-align:center">Cristiano Ronaldo</p>
+                                                    </div>
+                                                </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </nav>
-                                <div className="container-fluid" >
+                                <div className="container-fluid " >
                                     <div className="row" >
-                                        <div className="col-12" Style="overflow-y:scroll; height:500px" >
+                                        <div className="col-12 style-0 " Style="overflow-y:scroll; height:340px;" >
                                             {this.state.estAcudientes && <Acudientes />}
                                             {this.state.estCategorias && <Categorias />}
                                             {this.state.estEscuelas && <Escuelas />}
