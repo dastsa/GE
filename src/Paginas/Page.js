@@ -16,13 +16,13 @@ class Page extends Component {
         };
     }
     showAcudientes() {
-        this.setState({ estAcudientes: true, estCategorias: false, estEscuelas: false});
+        this.setState({ estAcudientes: true, estCategorias: false, estEscuelas: false });
     }
     showCategorias() {
-        this.setState({ estAcudientes: false, estCategorias: true, estEscuelas: false});
+        this.setState({ estAcudientes: false, estCategorias: true, estEscuelas: false });
     }
     showeEscuelas() {
-        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: true});
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: true });
     }
     render() {
         return (
@@ -37,7 +37,7 @@ class Page extends Component {
                 <div className="row">
                     <div className="col-12">
                         <div className="wrapper sticky-top">
-                            <nav id="sidebar" className="sticky-top style-0"  Style="overflow-y:scroll; height:600px" >
+                            <nav id="sidebar" className="sticky-top style-0" Style="overflow-y:scroll; height:600px" >
                                 <div class="sidebar-header sticky-top">
                                     <h3 className="App-titulo">Gestion Deportiva</h3>
                                 </div>
@@ -48,8 +48,21 @@ class Page extends Component {
                                         <a href="#perfilJugador" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Perfil</a>
                                         <ul class="collapse list-unstyled" id="perfilJugador">
                                             <li>
-                                                <a href="#" onClick={this.showAcudientes.bind(this)}>Información</a>
+                                                <a href="#info" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Información</a>
+                                                <ul id="info">
+
+                                                    <li>
+                                                        <a href="#">Personal</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Deportiva</a>
+                                                    </li>
+
+                                                </ul>
+
                                             </li>
+
+
                                             <li>
                                                 <a href="#">Papelería</a>
                                             </li>
@@ -192,14 +205,14 @@ class Page extends Component {
                                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                             <ul class="nav navbar-nav ml-auto">
                                                 <li class="nav-item active">
-                                                <div className="row">
-                                                    <div className="col-xs-6 col-md-4">
-                                                        <img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" />
+                                                    <div className="row">
+                                                        <div className="col-xs-6 col-md-4">
+                                                            <img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" />
+                                                        </div>
+                                                        <div className=".col-xs-12 col-md-8 align-items-md-center" Style="text-align:center">
+                                                            <p className="App-subtitulo align-items-md-center" Style="text-align:center">Cristiano Ronaldo</p>
+                                                        </div>
                                                     </div>
-                                                    <div className=".col-xs-12 col-md-8 align-items-md-center" Style="text-align:center">
-                                                        <p className="App-subtitulo align-items-md-center" Style="text-align:center">Cristiano Ronaldo</p>
-                                                    </div>
-                                                </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -220,7 +233,7 @@ class Page extends Component {
                 </div>
             </div>
         );
-  }
+    }
 }
 
 export default Page;
