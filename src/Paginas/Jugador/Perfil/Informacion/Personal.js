@@ -8,13 +8,18 @@ class InformacionPersonal extends Component {
 
     render() {
         return (
-            <div className="App-header">
-                <div className="container-contact100 ">
-                    <div className="wrap-contact100">
-                        <form className="col-" action="">
 
-                            <div className="row">
-                                <div className="col-5">
+            <div className="container-fluid">
+            <div className="container-contact100 ">
+                <form className="container-contact100" action="">
+
+            <div className="container-fluid">
+                <div className="container-contact100 ">
+                    <form className="container-contact100" action="">
+
+
+                        <div className="row">
+                            <div className="col-5">
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="nomJug">NOMBRES:</label>
                                     <input type="text" className="form-control Input-Style" id="nomJug" placeholder="Nombre" name="nomJug" required />
@@ -43,11 +48,11 @@ class InformacionPersonal extends Component {
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                                </div>
+                            </div>
 
 
-                          
-                                <div className="col-5">
+
+                            <div className="col-5">
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="ciudad">TIPO DE DOCUMENTO:</label>
                                     <input type="text" className="form-control Input-Style" id="tipoDocumento" placeholder="Tipo documento" name="tipoDoc" required />
@@ -75,14 +80,14 @@ class InformacionPersonal extends Component {
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                           
-                                </div>
-                            
+
+                            </div>
 
 
 
 
-                                <div className="col-5">
+
+                            <div className="col-5">
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="rh">RH:</label>
                                     <select id="rh" className="form-control Input-Style">
@@ -108,14 +113,14 @@ class InformacionPersonal extends Component {
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                          
-                                </div>
-                          
+
+                            </div>
 
 
 
 
-                                <div className="col-5">
+
+                            <div className="col-5">
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="website">ESTRATO:</label>
                                     <input type="text" className="form-control Input-Style" id="website" placeholder="Digite su estrato" name="website" required />
@@ -143,12 +148,9 @@ class InformacionPersonal extends Component {
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                                </div>
+                            </div>
 
-                        
-                       
-
-                                <div className="col-5">
+                            <div className="col-5">
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="jornadaJug">JORNADA ENTRENAMIENTO:</label>
                                     <select id="jornadaJug" className="form-control Input-Style">
@@ -172,13 +174,19 @@ class InformacionPersonal extends Component {
                                         <option>...</option>
                                     </select>
                                 </div>
-                                </div>
-                                </div>
-                       
+                            </div>
+                        </div>
+                        </form>
+                        </div>
+                </div>
+                      
 
 
-                            <div className="row">
-                                <div className="col-5">
+            <div className="container-fluid">
+                <div className="container-contact100 ">
+                    <form className="container-contact100" action="">
+                        <div className="row">
+                            <div className="col-5">
                                 <label className="App-subtitulo2" for="website">DATOS DE ACUDIENTES:</label>
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="website">NOMBRE DEL ACUDIENTE:</label>
@@ -205,12 +213,12 @@ class InformacionPersonal extends Component {
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                                </div>
-                    
+                            </div>
 
-     
 
-                                <div className="col-5">
+
+
+                            <div className="col-5">
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="website">DOCUMENTO PADRE:</label>
                                     <input type="text" className="form-control Input-Style" id="website" placeholder="Digite el nombre del acudiente" name="website" />
@@ -223,13 +231,16 @@ class InformacionPersonal extends Component {
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
-                                </div>
-                                </div>
+                            </div>
+                        </div>
 
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
+            </form>
+                </div>
+            </div>
+
 
         );
     }
