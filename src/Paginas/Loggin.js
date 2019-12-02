@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from '../imagenes/cuadros logo.png'
+import Logo from '../imagenes/logo20.png';
 
 class Loggin extends Component {
   constructor(props) {
@@ -26,19 +27,24 @@ class Loggin extends Component {
 
   render() {
     return (
+      <div className="container-fluid">
 
-      <div className="App-header">
-        <div className="container-contact100">
+      <div className="row">
+      <div className="col-12">
+          <header className="py-3 bg-image-full fondo" >
+              <img class="img-fluid d-block mx-auto" src={Logo} alt="" />
+          </header>
+      </div>
+      </div>
+  
+      <div className="container-fluid">
+      <div className="container-contact100 ">
+          <form className="container-contact100" action="">
 
-          <div className="row">
-            <img src={logo} Style="width: 100%; height: 100%;" alt="img" />
-          </div>
-
-
-
+         
 
           <div className="wrap-contact100">
-            <form className="col-" action="">
+            <form className="col-12" action="">
 
               <div className="form-group">
                 <h3 className="App-subtitulo2">USUARIO</h3>
@@ -51,12 +57,17 @@ class Loggin extends Component {
               </div>
 
               <div className="form-group">
-                <button className="Btn-aceptar" type="submit"></button>
+                <button className="Btn-aceptar" type="submit">Ingresar</button>
               </div>
             </form>
-          </div>
+            </div>
+
+            </form>
+            </div>
+            </div>  
+
         </div>
-      </div>
+          
 
        
 
