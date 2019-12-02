@@ -8,6 +8,7 @@ import Escuelas from "./Maestros/Escuelas";
 import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
 import Jugadores from "./Maestros/Jugadores";
 import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
+import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
 
 class Page extends Component {
     constructor() {
@@ -15,17 +16,21 @@ class Page extends Component {
         this.state = {
             estAcudientes: false,
             estCategorias: false,
-            estEscuelas: false
+            estEscuelas: false,
+            estProfesorAsitencia: false,
         };
     }
     showAcudientes() {
-        this.setState({ estAcudientes: true, estCategorias: false, estEscuelas: false });
+        this.setState({ estAcudientes: true, estCategorias: false, estEscuelas: false, estProfesorAsitencia:false });
     }
     showCategorias() {
-        this.setState({ estAcudientes: false, estCategorias: true, estEscuelas: false });
+        this.setState({ estAcudientes: false, estCategorias: true, estEscuelas: false, estProfesorAsitencia:false });
     }
     showeEscuelas() {
-        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: true });
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: true, estProfesorAsitencia:false });
+    }
+    showProfesorAsistencia() {
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia:true });
     }
     render() {
         return (
@@ -113,7 +118,7 @@ class Page extends Component {
                                                 <a href="#">Planear Entrenamiento</a>
                                             </li>
                                             <li>
-                                                <a href="#">Asistencia</a>
+                                                <a href="#" onClick={this.showProfesorAsistencia.bind(this)}>Asistencia</a>
                                             </li>
                                             <li>
                                                 <a href="#">Grupo</a>
@@ -232,6 +237,7 @@ class Page extends Component {
                                             {this.state.estAcudientes && <InformacionPersonal/>}
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
+                                            {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
                                         </div>
                                     </div>
                                 </div>

@@ -86,7 +86,6 @@ class InformacionDeportiva extends Component {
 
 
                             <div className="form-group margin">
-                            <label className="App-subtitulo2" for="posicionmJug">BECADO:</label>
                                 <button type="submit" className="Btn-aceptar">Enviar</button>
                             </div>
 
