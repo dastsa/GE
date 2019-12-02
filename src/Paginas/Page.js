@@ -125,7 +125,12 @@ class Page extends Component {
 
                                 <ul class="list-unstyled components">
                                     <p>Administrador</p>
-
+                                    <li class="active">
+                                        <a href="#equiposAdministrador" data-toggle="collapse" aria-expanded="false" >Jugadores</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#equiposAdministrador" data-toggle="collapse" aria-expanded="false" >Profesores</a>
+                                    </li>
                                     <li class="active">
                                         <a href="#equiposAdministrador" data-toggle="collapse" aria-expanded="false" >Equipos</a>
                                     </li>
