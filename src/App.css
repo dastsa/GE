@@ -153,6 +153,7 @@
   border-radius: 10px;
   overflow: hidden;
   padding: 30px 55px 30px 55px;
+  text-align: center;
 }
 
 .fondo{
@@ -486,4 +487,72 @@ input[type="date"], focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+
+
+
+
+
+.bordercheck{
+  border: 50px;
+}
+
+
+
+
+
+
+
+
+div.tabbed-menu {
+  font-family: "Helvetica";
+  font-size: 15px;
+  width: 600px;
+}
+
+ul.tabs {
+  text-align: center;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+  color: #0088CC;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+ul.tabs li {
+  margin-bottom: -1px;
+  padding: 3px 10px 0 10px;
+  border: 1px solid #DDDDDD;
+  background: #EFEFEF;
+  
+  
+  display: inline-block;
+  
+ 
+  border-top-left-radius: 6px; 
+  border-top-right-radius: 6px;
+}
+
+ul.tabs li.selected {
+  background: #FFF;
+  border-bottom-color: transparent;
+
+}
+
+ul.tabs li:hover {
+  color: #333333;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+div.page {
+  text-align: center;
+  position: absolute;
+}
+
+div.page li {
+  text-align: left;
+  list-style-type: none;
 }

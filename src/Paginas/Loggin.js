@@ -29,22 +29,18 @@ class Loggin extends Component {
     return (
       <div className="container-fluid">
 
-      <div className="row">
-      <div className="col-12">
-          <header className="py-3 bg-image-full fondo" >
+        <div className="row">
+          <div className="col-12">
+            <header className="py-3 bg-image-full fondo" >
               <img class="img-fluid d-block mx-auto" src={Logo} alt="" />
-          </header>
-      </div>
-      </div>
-  
-      <div className="container-fluid">
-      <div className="container-contact100 ">
-          <form className="container-contact100" action="">
+            </header>
+          </div>
+        </div>
 
-         
-
+        <form className="container-contact100" action="">
           <div className="wrap-contact100">
-            <form className="col-12" action="">
+            <div className="row">
+              <div className="col-12">
 
               <div className="form-group">
                 <h3 className="App-subtitulo2">USUARIO</h3>
@@ -54,22 +50,26 @@ class Loggin extends Component {
               <div className="form-group">
                 <h3 className="App-subtitulo2">PASSWORD</h3>
                 <input className="Input-Style form-control form-group" type="password" name="password" id="inputPassword" placeholder="Digite su contraseña" required />
+                <a href='#'className="App-subtitulo2" Style="color:white;">¿Olvidaste tu cuenta?</a>
               </div>
 
-              <div className="form-group">
+
+
+              <div className="form-group center">
                 <button className="Btn-aceptar" type="submit">Ingresar</button>
               </div>
-            </form>
             </div>
-
-            </form>
             </div>
-            </div>  
+          </div>
 
-        </div>
-          
+        </form>
 
-       
+      </div>
+
+
+
+
+
 
 
     );
