@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
-import Logo from '../../imagenes/logo20.png'
+import Logo from '../../imagenes/logo20.png';
+import datos from './selectBd';
 
 class Acudientes extends Component {
     componentDidMount() {
@@ -35,8 +36,11 @@ class Acudientes extends Component {
                             <div className="form-group">
                                 <label for="tipoDocP" className="App-subtitulo2">TIPO DE DOCUMENTO:</label>
                                 <select id="tipoDoc" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                 </select>
                             </div>
                             <div className="form-group">

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
 //import Acudientes from "./SubAcudientes";
-import logo from '../../imagenes/cuadros logo.png'
+import logo from '../../imagenes/cuadros logo.png';
+import datos from './selectBd';
 
 class Jugadores extends Component {
     constructor() {
@@ -79,8 +80,11 @@ class Jugadores extends Component {
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="tipoDoc">TIPO DE DOCUMENTO:</label>
                                     <select id="tipoDoc" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
-                                        <option>...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                     </select>
                                 </div>
                                 <div className="form-group">
@@ -145,8 +149,11 @@ class Jugadores extends Component {
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="rh">RH:</label>
                                     <select id="rh" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
-                                        <option>...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                     </select>
                                 </div>
                                 <div className="form-group">
@@ -292,14 +299,21 @@ class Jugadores extends Component {
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="gradoJug">GRADO:</label>
                                     <select id="gradoJug" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
-                                        <option>...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                     </select>
                                 </div>
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="jornadaJug">JORNADA ENTRENAMIENTO:</label>
                                     <select id="jornadaJug" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                         <option>Diurna</option>
                                         <option>Mixta</option>
                                         <option>Nocturna</option>
@@ -341,6 +355,11 @@ class Jugadores extends Component {
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="tallacJug">TALLA DE CAMISA:</label>
                                     <select id="gradoJug" className="form-control Input-Style">
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                         <option>S</option>
                                         <option>L</option>
                                         <option>M</option>
@@ -349,7 +368,12 @@ class Jugadores extends Component {
                                 <div className="form-group">
                                     <label className="App-subtitulo2" for="tallapJug">TALLA DE PANTALÓN:</label>
                                     <select id="tallapJug" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
+                                        
+                                        {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                         <option>S</option>
                                         <option>L</option>
                                         <option>M</option>

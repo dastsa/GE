@@ -15,11 +15,13 @@
 .App-button{
   background-color: transparent;
   color: white;
-  font: small-caps normal 400 16px/22px Verdana;
+  font: small-caps normal 400 16px/22px ;
   border: 2px solid rgba(158,119,80,0.72);
   border-radius: 80px;
   font-weight: bold;
   font-size: 120%;
+  height: 50px;
+  width: 150px;
 }
 
 .App-titulo2{
@@ -51,7 +53,7 @@
   margin-top: 4%;
   font: small-caps normal 400 16px/22px Verdana;
   font-weight: bold;
-  font-size: 80%;
+  font-size: 100%;
 }
 .App-link {
   color: #09d3ac;
@@ -156,9 +158,51 @@
 }
 
 .fondo{
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-image: url("../src/imagenes/cuadros.png");
 }
+
+.fondo1{
+  background-repeat: no-repeat;
+  background-image: url("../src/imagenes/fondoWeb.png");
+  background-size:100% 100%;
+  height: 100vh;
+}
+
+
+/* Por debajo de 576px */
+@media (max-width: 576px){
+  .fondo1{
+    background-repeat: no-repeat;
+    background-image: url("../src/imagenes/Movil.png");
+    background-size:100% 100%;
+    height: 100vh;
+  }
+}
+
+
+
+
+/* Por debajo de 768px */
+    @media (max-width:  768px){
+      .App-titulo{
+        color: white;
+        margin-top: 10%;
+        font: small-caps normal 400 16px/22px Verdana;
+        font-weight: bold;
+        font-size: 120%;
+      }
+    }
+    /* Por debajo de 576px */
+    @media (max-width: 576px){
+      .App-titulo{
+        color: white;
+        margin-top: 10%;
+        font: small-caps normal 400 16px/22px Verdana;
+        font-weight: bold;
+        font-size: 80%;
+      }
+    }
 
 
 
@@ -486,4 +530,24 @@ input[type="date"], focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+
+.leftmenuinnerinner {
+  height:350px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.portada{
+  background: url(http://desarrollofrontend.com/wp-content/uploads/2014/09/flatdiseno1.png) no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100% ;
+  text-align: center;
+
 }

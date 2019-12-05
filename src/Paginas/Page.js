@@ -8,7 +8,10 @@ import Escuelas from "./Maestros/Escuelas";
 import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
 import Jugadores from "./Maestros/Jugadores";
 import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
-import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
+import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia";
+import ProfeCategorias from "./Profesor/Entrenamiento/Categorias";
+import ProfePlanEntrenamiento from "./Profesor/Entrenamiento/PlanearEntrenamiento";
+import Grupos from "./Maestros/Grupos";
 
 class Page extends Component {
     constructor() {
@@ -32,12 +35,20 @@ class Page extends Component {
     showProfesorAsistencia() {
         this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia:true });
     }
+
+    componentDidMount(){
+        let height= window.clientHeight;
+        let hn= document.getElementById("headerN").height;
+        $("#sidebar").css({'height':(height-hn-100)+"px"})
+
+    }
+
     render() {
         return (
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
-                        <header className="py-3 bg-image-full fondo" >
+                        <header className="py-1 bg-image-full fondo" id="headerN" >
                             <img class="img-fluid d-block mx-auto" src={Logo} alt="" />
                         </header>
                     </div>
@@ -45,7 +56,8 @@ class Page extends Component {
                 <div className="row">
                     <div className="col-12">
                         <div className="wrapper sticky-top">
-                            <nav id="sidebar" className="sticky-top style-0" Style="overflow-y:scroll; height:600px" >
+                            <div>
+                                <nav id="sidebar" className="sticky-top style-0 "  Style="overflow-y:scroll; height:450px" >
                                 <div class="sidebar-header sticky-top">
                                     <h3 className="App-titulo">Gestion Deportiva</h3>
                                 </div>
@@ -203,7 +215,7 @@ class Page extends Component {
 
                                 </ul>
                             </nav>
-
+                            </div>
                             <div id="content">
                                 <nav class="navbar navbar-expand-lg sticky-top ">
                                     <div class="container-fluid">
@@ -220,7 +232,7 @@ class Page extends Component {
                                                 <li class="nav-item active">
                                                     <div className="row">
                                                         <div className="col-xs-6 col-md-4">
-                                                            <img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" />
+                                                            {/* {<img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" /> */}
                                                         </div>
                                                         <div className=".col-xs-12 col-md-8 align-items-md-center" Style="text-align:center">
                                                             <p className="App-subtitulo align-items-md-center" Style="text-align:center">Cristiano Ronaldo</p>
@@ -233,11 +245,12 @@ class Page extends Component {
                                 </nav>
                                 <div className="container-fluid " >
                                     <div className="row" >
-                                        <div className="col-12 style-0 " Style="overflow-y:scroll; height:500px;" >
+                                        <div className="col-12 style-0 "  Style="overflow-y:scroll; height:370px;" >
                                             {this.state.estAcudientes && <InformacionPersonal/>}
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                             {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
+                                            <Acudientes/>
                                         </div>
                                     </div>
                                 </div>

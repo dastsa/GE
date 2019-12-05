@@ -1,8 +1,31 @@
 import React, { Component } from "react";
 import $ from 'jquery';
-import logo from '../../imagenes/logo2.png'
+import logo from '../../imagenes/logo2.png';
+import datos from './selectBd';
 
 class Sedes extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+    state = {
+        pais: "",
+        ciudad: "",
+        escuela: "",
+        categoria: "",
+        razonS: "",
+        direccion: "",
+        website: ""
+    };
+
+    onKeyPress = field => {
+        return evt => {
+            const val = evt.target.value;
+            const newState = { ...this.state }
+            newState[field] = val;
+            this.setState(newState);
+        }
+    }
     componentDidMount() {
         $("#seccion1").show();
         $("#seccion2 , #seccion3").hide();
@@ -32,30 +55,43 @@ class Sedes extends Component {
                         <div id="seccion1">
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="pais">PAÍS DE LA SEDE:</label>
-                                <select id="pais" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>...</option>
+                                <select id="pais" onChange={this.onKeyPress('pais')} className="form-control Input-Style">
+                                {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                 </select>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="ciudad">CIUDAD DE LA SEDE:</label>
-                                <select id="ciudad" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
+                                <select id="ciudad" onChange={this.onKeyPress('ciudad')} className="form-control Input-Style">
+                                {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}<option selected>Elige...</option>
                                     <option>...</option>
                                 </select>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="pais">ESCUELA A LA QUE PERTENECE:</label>
-                                <select id="pais" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>...</option>
+                                <select id="escuela" onChange={this.onKeyPress('escuela')} className="form-control Input-Style">
+                                {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                 </select>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="pais">CATEGORÍA:</label>
-                                <select id="pais" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>...</option>
+                                <select id="categoria" onChange={this.onKeyPress('categoria')} className="form-control Input-Style">
+                                {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                 </select>
                             </div>
                             <div class="row">
@@ -72,20 +108,20 @@ class Sedes extends Component {
                         <div id="seccion2">
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="razonsocialSede">RAZÓN SOCIAL:</label>
-                                <input type="password" className="form-control Input-Style" id="razonsocialSede" placeholder="Nombre de la Sede" name="razonsocialSede"
+                                <input type="password" onChange={this.onKeyPress('razonS')} className="form-control Input-Style" id="razonsocialSede" placeholder="Nombre de la Sede" name="razonsocialSede"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="dirSede">DIRECCIÓN DE LA SEDE:</label>
-                                <input type="text" className="form-control Input-Style" id="dirSede" placeholder="Dirección" name="dirSede" required />
+                                <input type="text" onChange={this.onKeyPress('direccion')} className="form-control Input-Style" id="dirSede" placeholder="Dirección" name="dirSede" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="website">SITIO WEB:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <input type="text" onChange={this.onKeyPress('website')} className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>

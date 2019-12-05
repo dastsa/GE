@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
+import datos from './selectBd';
 
 class Profesores extends Component {
     constructor() {
@@ -54,8 +55,11 @@ class Profesores extends Component {
                                 <div className="form-group">
                                     <label for="tipoDocP" className="App-subtitulo2">Tipo de documento:</label>
                                     <select id="tipoDoc" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
-                                        <option>...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                     </select>
                                 </div>
                                 <div className="form-group">
@@ -120,8 +124,11 @@ class Profesores extends Component {
                                 <div className="form-group">
                                     <label for="rh" className="App-subtitulo2">RH:</label>
                                     <select id="rh" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
-                                        <option>...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                     </select>
                                 </div>
                                 <div className="form-group">
@@ -202,7 +209,11 @@ class Profesores extends Component {
                                 <div className="form-group">
                                     <label for="jornadaPro" className="App-subtitulo2">Jornada Entrenamiento:</label>
                                     <select id="jornadaPro" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                         <option>Diurna</option>
                                         <option>Mixta</option>
                                         <option>Nocturna</option>
@@ -227,6 +238,11 @@ class Profesores extends Component {
                                 <div className="form-group">
                                     <label for="tallacPro" className="App-subtitulo2">Talla de camisa:</label>
                                     <select id="gradoPro" className="form-control Input-Style">
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                         <option>S</option>
                                         <option>L</option>
                                         <option>M</option>
@@ -235,7 +251,11 @@ class Profesores extends Component {
                                 <div className="form-group">
                                     <label for="tallapPro" className="App-subtitulo2">Talla de pantalón:</label>
                                     <select id="tallapPro" className="form-control Input-Style">
-                                        <option selected>Elige...</option>
+                                    {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                         <option>S</option>
                                         <option>L</option>
                                         <option>M</option>

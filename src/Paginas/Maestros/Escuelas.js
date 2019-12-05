@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import $ from 'jquery';
-import logo from '../../imagenes/logo2.png'
+import logo from '../../imagenes/logo2.png';
+import datos from './selectBd';
 
 class Escuelas extends Component {
     componentDidMount() {
@@ -31,15 +32,21 @@ class Escuelas extends Component {
                         <div className="form-group">
                             <label className="App-subtitulo2" for="pais">PAÍS:</label>
                             <select id="pais" className="form-control Input-Style">
-                                <option selected>Elige...</option>
-                                <option>...</option>
+                            {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                             </select>
                         </div>
                         <div className="form-group">
                             <label className="App-subtitulo2" for="ciudad">CIUDAD:</label>
                             <select id="ciudad" className="form-control Input-Style">
-                                <option selected>Elige...</option>
-                                <option>...</option>
+                            {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                             </select>
                         </div>
                         <div class="row">
@@ -97,7 +104,11 @@ class Escuelas extends Component {
                         <div className="form-group">
                             <label className="App-subtitulo2" for="webplan">PLAN WEB:</label>
                             <select id="inputState" className="form-control">
-                                <option selected>Elige un plan...</option>
+                            {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
                                 <option>1 Gratis por 6 meses</option>
                                 <option>2 Basico</option>
                                 <option>3 Medio</option>
