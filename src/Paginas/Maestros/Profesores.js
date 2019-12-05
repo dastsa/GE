@@ -47,7 +47,7 @@ class Profesores extends Component {
     };
     render() {
         return (
-            <div className="container-fluid">
+            <div class="container-fluid">
                 <div className="container-contact100 ">
                     <div className="wrap-contact100">
                         <form className="col-" action="">
@@ -148,61 +148,63 @@ class Profesores extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="progress">
-                                    <div className="progress-bar Input-Style" Style="width:50%">50%</div>
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="button" className="App-button" onClick={this.ocultar2.bind(this)}>Siguiente</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div id="seccion3">
-                                <div className="form-group">
-                                    <label for="direccionPro" className="App-subtitulo2">Direccion:</label>
-                                    <input type="text" className="form-control Input-Style" id="direccionPro" placeholder="Direccion" name="direccionPro" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="barrioPro" className="App-subtitulo2">Barrio:</label>
-                                    <input type="text" className="form-control Input-Style" id="barrioPro" placeholder="Barrio" name="barrioPro" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="codPostalPro" className="App-subtitulo2">Codigo postal:</label>
-                                    <input type="number" className="form-control Input-Style" id="codPostalPro" placeholder="Codigo postal" name="codPostalPro" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="website" className="App-subtitulo2">Estrato:</label>
-                                    <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="website" className="App-subtitulo2">Telefono fijo:</label>
-                                    <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="website" className="App-subtitulo2">Celular:</label>
-                                    <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div className="form-group">
-                                            <button type="button" className="App-button" onClick={this.mostrar2.bind(this)}>Atras</button>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div className="form-group">
-                                            <button type="button" className="App-button" onClick={this.ocultar3.bind(this)}>Siguiente</button>
-                                        </div>
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:50%">50%</div>
+                            </div>
+                        
+                        <div id="seccion3">
+                            <div className="form-group">
+                                <label for="direccionPro" className="App-subtitulo2">Direccion:</label>
+                                <input type="text" className="form-control Input-Style" id="direccionPro" placeholder="Direccion" name="direccionPro" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label for="barrioPro" className="App-subtitulo2">Barrio:</label>
+                                <input type="text" className="form-control Input-Style" id="barrioPro" placeholder="Barrio" name="barrioPro" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label for="codPostalPro" className="App-subtitulo2">Codigo postal:</label>
+                                <input type="number" className="form-control Input-Style" id="codPostalPro" placeholder="Codigo postal" name="codPostalPro" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label for="website" className="App-subtitulo2">Estrato:</label>
+                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label for="website" className="App-subtitulo2">Telefono fijo:</label>
+                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label for="website" className="App-subtitulo2">Celular:</label>
+                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="button" className="App-button" onClick={this.mostrar2.bind(this)}>Atras</button>
                                     </div>
                                 </div>
-                                <div className="progress">
-                                    <div className="progress-bar Input-Style" Style="width:75%">75%</div>
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="button" className="App-button" onClick={this.ocultar3.bind(this)}>Siguiente</button>
+                                    </div>
                                 </div>
                             </div>
                             <div id="seccion4">
@@ -273,14 +275,21 @@ class Profesores extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="progress">
-                                    <div className="progress-bar Input-Style" Style="width:100%">100%</div>
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="submit" className="App-button">Enviar</button>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:100%">100%</div>
+                            </div>
+                        </div>
+                    </form>
                     </div>
                 </div>
             </div>
+
         );
     }
 }

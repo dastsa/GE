@@ -92,6 +92,7 @@ class Categorias extends Component {
                                     </div>
                                 </div>
                             </div>
+                        
 
                             <div className="form-group">
                                 <button className="Btn-aceptar" onClick={this.mostrar()} type="submit"></button>

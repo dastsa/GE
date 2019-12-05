@@ -41,14 +41,13 @@ class Productos extends Component {
     };
     render() {
         return (
-            <div className="container-fluid">
+
+            <div class="container-fluid">
                 <div className="container-contact100 ">
 
-                    <div className="wrap-contact100">
+                    <form className="container-contact100 " action="">
 
-                        <form className="col-" action="">
-
-                            <div id="seccion1">
+                        <div id="seccion1">
 
                                 <div className="form-group">
                                     <label for="pais" className="App-subtitulo2">PAIS:</label>
@@ -71,15 +70,15 @@ class Productos extends Component {
                                     </select>
                                 </div>
 
-                                <div className="form-group">
-                                    <button type="button" className="App-button" onClick={this.ocultar.bind(this)}>siguiente</button>
-                                </div>
-
-                                <div className="progress">
-                                    <div className="progress-bar Input-Style" Style="width:33%">33%</div>
-                                </div>
+                            <div className="form-group">
+                                <button type="button" className="App-button" onClick={this.ocultar.bind(this)}>siguiente</button>
                             </div>
-                            <div id="seccion2">
+
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:33%">33%</div>
+                            </div>
+                        </div>
+                        <div id="seccion2">
 
                                 <div className="form-group">
                                     <label for="nit" className="App-subtitulo2">NIT:</label>
@@ -105,7 +104,14 @@ class Productos extends Component {
                                     <div className="progress-bar Input-Style" Style="width:66%">66%</div>
                                 </div>
                             </div>
-                            <div id="seccion3">
+                            <div className="form-group">
+                                <button type="button" className="App-button" onClick={this.ocultar2.bind(this)}>siguiente</button>
+                            </div>
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:66%">66%</div>
+                            </div>
+                        
+                        <div id="seccion3">
 
 
                                 <div className="form-group">
@@ -129,18 +135,18 @@ class Productos extends Component {
                                     </select>
                                 </div>
 
-                                <div className="form-group">
-                                    <button type="submit" className="App-button">enviar</button>
-                                </div>
-                                <br />
-                                <div className="progress">
-                                    <div className="progress-bar Input-Style" Style="width:100%">100%</div>
-                                </div>
+                            <div className="form-group">
+                                <button type="submit" className="App-button">enviar</button>
                             </div>
-                        </form>
-                    </div>
+                            <br />
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:100%">100%</div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
+
         );
     }
 }

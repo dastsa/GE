@@ -55,39 +55,42 @@ class Escuelas extends Component {
                                     <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
                                 </div>
                             </div>
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:33%">33%</div>
+                            </div>
                         </div>
-                        <div className="progress">
-                            <div className="progress-bar Input-Style" Style="width:33%">33%</div>
-                        </div>
-                    </div>
-                    <div id="seccion2">
-                        <div className="form-group">
-                            <label className="App-subtitulo2" for="nit">NIT:</label>
-                            <input type="text" className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
-                            <div className="valid-feedback">Validado.</div>
-                            <div className="invalid-feedback">Por favor rellene este campo.</div>
-                        </div>
-                        <div className="form-group">
-                            <label className="App-subtitulo2" for="razonsocial">RAZON SOCIAL:</label>
-                            <input type="password" className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
-                                required />
-                            <div className="valid-feedback">Validado.</div>
-                            <div className="invalid-feedback">Por favor rellene este campo.</div>
-                        </div>
-                        <div className="form-group">
-                            <label className="App-subtitulo2" for="file">IMPORTAR LOGO</label>
-                            <input type="file" className="form-control Input-Style" id="file" name="file" />
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div className="form-group">
-                                    <button type="button" className="Btn-aceptar" onClick={this.mostrar.bind(this)}>Atras</button>
+                        <div id="seccion2">
+                            <div className="form-group">
+                                <label className="App-subtitulo2" for="nit">NIT:</label>
+                                <input type="text" className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label className="App-subtitulo2" for="razonsocial">RAZON SOCIAL:</label>
+                                <input type="password" className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
+                                    required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label className="App-subtitulo2" for="file">IMPORTAR LOGO</label>
+                                <input type="file" className="form-control Input-Style" id="file" name="file" />
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="button" className="Btn-aceptar" onClick={this.mostrar.bind(this)}>Atrás</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="button" className="Btn-aceptar" onClick={this.ocultar2.bind(this)}>Siguiente</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div className="form-group">
-                                    <button type="button" className="Btn-aceptar" onClick={this.ocultar2.bind(this)}>Siguiente</button>
-                                </div>
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:66%">66%</div>
                             </div>
                         </div>
                         <div className="progress">
@@ -121,18 +124,26 @@ class Escuelas extends Component {
                                     <button type="button" className="Btn-aceptar" onClick={this.mostrar2.bind(this)}>Atras</button>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div className="form-group">
-                                    <button type="submit" className="Btn-aceptar">Enviar</button>
+                            <div class="row">
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="button" className="Btn-aceptar" onClick={this.mostrar2.bind(this)}>Atras</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div className="form-group">
+                                        <button type="submit" className="Btn-aceptar">Enviar</button>
+                                    </div>
                                 </div>
                             </div>
+                            <div className="progress">
+                                <div className="progress-bar Input-Style" Style="width:100%">100%</div>
+                            </div>
                         </div>
-                        <div className="progress">
-                            <div className="progress-bar Input-Style" Style="width:100%">100%</div>
                         </div>
-                    </div>
-                </form>
-            </div>                                                                 
+                    </form>
+                
+            </div>
         );
     }
 }

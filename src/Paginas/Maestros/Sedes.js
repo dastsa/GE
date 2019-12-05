@@ -48,9 +48,9 @@ class Sedes extends Component {
     };
     render() {
         return (
-            <div class="container-fluid ">
+            <div class="container-fluid">
                 <div className="container-contact100 ">
-                    <div className="wrap-contact100">
+
                     <form className="container-contact100 " action="">
                         <div id="seccion1">
                             <div className="form-group">
@@ -143,8 +143,8 @@ class Sedes extends Component {
                         </div>
                     </form>
                 </div>
-                </div>
             </div>
+
         );
     }
 }
