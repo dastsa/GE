@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import $ from 'jquery';
-
+import logo from '../../imagenes/logo2.png';
+import datos from './selectBd';
 
 class Escuelas extends Component {
 
@@ -45,30 +46,33 @@ class Escuelas extends Component {
     };
     render() {
         return (
-            <div class="container-fluid">
-                <div className="container-contact100 ">
-
-                    <form className="container-contact100 " action="">
-                        <div id="seccion1">
-                            <div className="form-group">
-                                <label className="App-subtitulo2" for="pais">PAÍS:</label>
-                                <select onChange={this.onKeyPress('pais')}  id="pais" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div className="form-group">
-                                <label className="App-subtitulo2" for="ciudad">CIUDAD:</label>
-                                <select onChange={this.onKeyPress('ciudad')} id="ciudad" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div className="form-group">
-                                        <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
-                                    </div>
+            <div className="container-contact100">
+                <form className='col-' action="">
+                    <div id="seccion1">
+                        <div className="form-group">
+                            <label className="App-subtitulo2" for="pais">PAÍS:</label>
+                            <select id="pais" className="form-control Input-Style">
+                            {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label className="App-subtitulo2" for="ciudad">CIUDAD:</label>
+                            <select id="ciudad" className="form-control Input-Style">
+                            {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div className="form-group">
+                                    <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
                                 </div>
                             </div>
                             <div className="progress">
@@ -109,22 +113,36 @@ class Escuelas extends Component {
                                 <div className="progress-bar Input-Style" Style="width:66%">66%</div>
                             </div>
                         </div>
-                        <div id="seccion3">
-                            <div className="form-group">
-                                <label className="App-subtitulo2" for="sitioweb">SITIO WEB:</label>
-                                <input onChange={this.onKeyPress('sitioweb')}  type="text" className="form-control Input-Style" id="sitioweb" placeholder="URL de tu sitio web" name="sitioweb" required />
-                                <div className="valid-feedback">Validado.</div>
-                                <div className="invalid-feedback">Por favor rellene este campo.</div>
-                            </div>
-                            <div className="form-group">
-                                <label className="App-subtitulo2" for="planweb">PLAN WEB:</label>
-                                <select onChange={this.onKeyPress('planweb')} id="inputState" className="form-control">
-                                    <option selected>Elige un plan...</option>
-                                    <option>1 Gratis por 6 meses</option>
-                                    <option>2 Basico</option>
-                                    <option>3 Medio</option>
-                                    <option>4 Alto</option>
-                                </select>
+                        <div className="progress">
+                            <div className="progress-bar Input-Style" Style="width:66%">66%</div>
+                        </div>
+                    </div>
+                    <div id="seccion3">
+                        <div className="form-group">
+                            <label className="App-subtitulo2" for="website">SITIO WEB:</label>
+                            <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                            <div className="valid-feedback">Validado.</div>
+                            <div className="invalid-feedback">Por favor rellene este campo.</div>
+                        </div>
+                        <div className="form-group">
+                            <label className="App-subtitulo2" for="webplan">PLAN WEB:</label>
+                            <select id="inputState" className="form-control">
+                            {datos.map((data) => {
+                                        return(
+                                            <option>{data.dato}</option>
+                                         );
+                                    })}
+                                <option>1 Gratis por 6 meses</option>
+                                <option>2 Basico</option>
+                                <option>3 Medio</option>
+                                <option>4 Alto</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div className="form-group">
+                                    <button type="button" className="Btn-aceptar" onClick={this.mostrar2.bind(this)}>Atras</button>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -142,8 +160,9 @@ class Escuelas extends Component {
                                 <div className="progress-bar Input-Style" Style="width:100%">100%</div>
                             </div>
                         </div>
+                        </div>
                     </form>
-                </div>
+                
             </div>
         );
     }

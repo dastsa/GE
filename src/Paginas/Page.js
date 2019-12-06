@@ -4,6 +4,7 @@ import Logo from '../imagenes/logo20.png';
 import Escuelas from "./Maestros/Escuelas";
 import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
 import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
+
 import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
 import PlanearEntrenamiento from "./Profesor/Entrenamiento/PlanearEntrenamiento"
 import Acudientes from "./Maestros/Acudientes";
@@ -38,13 +39,21 @@ class Page extends Component {
     showProfesorAsistencia() {
         this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
     }
+
+    componentDidMount(){
+        let height= window.clientHeight;
+        let hn= document.getElementById("headerN").height;
+        $("#sidebar").css({'height':(height-hn-100)+"px"})
+
+    }
+
     render() {
         return (
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
-                        <header className="py-3 bg-image-full fondo" >
-                            <img className="img-fluid d-block mx-auto" src={Logo} alt="" />
+                        <header className="py-1 bg-image-full fondo" id="headerN" >
+                            <img class="img-fluid d-block mx-auto" src={Logo} alt="" />
                         </header>
                     </div>
                 </div>
@@ -227,7 +236,7 @@ class Page extends Component {
                                                 <li className="nav-item active">
                                                     <div className="row">
                                                         <div className="col-xs-6 col-md-4">
-                                                            <img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" />
+                                                            {/* {<img className="rounded-circle" src="https://www.juventuz.com/data/avatars/m/21/21868.jpg?1560872557" alt="" /> */}
                                                         </div>
                                                         <div className=".col-xs-12 col-md-8 align-items-md-center" Style="text-align:center">
                                                             <p className="App-subtitulo align-items-md-center" Style="text-align:center">Cristiano Ronaldo</p>
@@ -253,7 +262,8 @@ class Page extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            
         );
     }
 }
