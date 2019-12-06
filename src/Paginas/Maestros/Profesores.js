@@ -4,6 +4,40 @@ import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
 
 class Profesores extends Component {
+    state = {
+        tipoDoc: "",
+        nroDoc: "",
+        lugarExp: "",
+        fechaExp: "",
+        fechaNac: "",
+        nomPro: "",
+        apePro: "",
+        ciudadNac: "",
+        correo: "",
+        rh: "",
+        epsPro: "",
+        direccionPro: "",
+        barrioPro: "",
+        codPostalPro: "",
+        estrato: "",
+        telFijo: "",
+        celular: "",
+        jornadaPro: "",
+        pasaportePro: "",
+        libreta: "",
+        fotoPro: "",
+        tallacPro: "",
+        tallapPro: "",
+    };
+    onKeyPress = field => {
+        return evt => {
+            const val = evt.target.value;
+            const newState = { ...this.state }
+            newState[field] = val;
+            this.setState(newState);
+        }
+    }
+
     constructor() {
         super();
         this.state = {
@@ -52,38 +86,40 @@ class Profesores extends Component {
                     <form className="container-contact100 " action="">
                         <div id="seccion1">
                             <div className="form-group">
-                                <label for="tipoDocP" className="App-subtitulo2">Tipo de documento:</label>
-                                <select id="tipoDoc" className="form-control Input-Style">
+                                <label for="tipoDoc" className="App-subtitulo2">Tipo de documento:</label>
+                                <select onChange={this.onKeyPress('tipoDoc')}id="tipoDoc" className="form-control Input-Style">
                                     <option selected>Elige...</option>
-                                    <option>...</option>
+                                    <option>Tarjeta de identidad</option>
+                                    <option>Cédula de ciudadania</option>
+                                    <option>Cédula de extranjería</option>
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label for="nroIp" className="App-subtitulo2">Nro de documento:</label>
-                                <input type="text" className="form-control Input-Style" id="nroIp" placeholder="Numero de documento de identidad" name="nroIp" required />
+                                <label for="nroDoc" className="App-subtitulo2">Nro de documento:</label>
+                                <input onChange={this.onKeyPress('nroDoc')}type="text" className="form-control Input-Style" id="nroDoc" placeholder="Numero de documento de identidad" name="nroDoc" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="lugarExp" className="App-subtitulo2">Lugar de expedición:</label>
-                                <input type="text" className="form-control Input-Style" id="lugarExp" placeholder="Ciudad" name="lugarExp" required />
+                                <input onChange={this.onKeyPress('lugarExp')}type="text" className="form-control Input-Style" id="lugarExp" placeholder="Ciudad" name="lugarExp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="fechaExp" className="App-subtitulo2">Fecha de expedición:</label>
-                                <input type="date" className="form-control Input-Style" id="fechaExp" name="fechaExp" required />
+                                <input onChange={this.onKeyPress('fechaExp')} type="date" className="form-control Input-Style" id="fechaExp" name="fechaExp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="fechaNacp" className="App-subtitulo2">Fecha de nacimiento:</label>
-                                <input type="date" className="form-control Input-Style" id="fechaNacp" name="fechaNacp" required />
+                                <label for="fechaNac" className="App-subtitulo2">Fecha de nacimiento:</label>
+                                <input onChange={this.onKeyPress('fechaNac')}type="date" className="form-control Input-Style" id="fechaNac" name="fechaNac" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <button type="button" className="App-button" onClick={this.ocultar.bind(this)}>Siguiente</button>
+                                <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
                             </div>
                             <div className="progress">
                                 <div className="progress-bar Input-Style" Style="width:25%">25%</div>
@@ -92,52 +128,59 @@ class Profesores extends Component {
                         <div id="seccion2">
                             <div className="form-group">
                                 <label for="nomPro" className="App-subtitulo2">Nombres:</label>
-                                <input type="text" className="form-control Input-Style" id="nomPro" placeholder="Nombre" name="nomPro" required />
+                                <input onChange={this.onKeyPress('nomPro')} type="text" className="form-control Input-Style" id="nomPro" placeholder="Nombre" name="nomPro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="apePro" className="App-subtitulo2">Apellidos:</label>
-                                <input type="text" className="form-control Input-Style" id="apePro" placeholder="Apellidos" name="apePro"
+                                <input onChange={this.onKeyPress('apePro')}type="text" className="form-control Input-Style" id="apePro" placeholder="Apellidos" name="apePro"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="ciudadNac" className="App-subtitulo2">Ciudad de nacimiento:</label>
-                                <input type="text" className="form-control Input-Style" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
+                                <input onChange={this.onKeyPress('ciudadNac')}type="text" className="form-control Input-Style" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="ciudadNac" className="App-subtitulo2">Correo electronico:</label>
-                                <input type="email" className="form-control Input-Style" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
+                                <label for="correo" className="App-subtitulo2">Correo electronico:</label>
+                                <input onChange={this.onKeyPress('correo')}type="email" className="form-control Input-Style" id="correo" placeholder="Apellidos" name="correo"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="rh" className="App-subtitulo2">RH:</label>
-                                <select id="rh" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('rh')}id="rh" className="form-control Input-Style">
                                     <option selected>Elige...</option>
-                                    <option>...</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB-</option>
+                                    <option>AB+</option>
                                 </select>
                             </div>
                             <div className="form-group">
                                 <label for="epsPro" className="App-subtitulo2">EPS:</label>
-                                <input type="text" className="form-control Input-Style" id="epsPro" placeholder="EPS" name="epsPro"
+                                <input onChange={this.onKeyPress('epsPro')}type="text" className="form-control Input-Style" id="epsPro" placeholder="EPS" name="epsPro"
                                     required />
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <div className="form-group">
-                                        <button type="button" className="App-button" onClick={this.mostrar.bind(this)}>Atras</button>
+                                        <button type="button" className="Btn-aceptar" onClick={this.mostrar.bind(this)}>Atras</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div className="form-group">
-                                        <button type="button" className="App-button" onClick={this.ocultar2.bind(this)}>Siguiente</button>
+                                        <button type="button" className="Btn-aceptar" onClick={this.ocultar2.bind(this)}>Siguiente</button>
                                     </div>
                                 </div>
                             </div>
@@ -148,49 +191,49 @@ class Profesores extends Component {
                         <div id="seccion3">
                             <div className="form-group">
                                 <label for="direccionPro" className="App-subtitulo2">Direccion:</label>
-                                <input type="text" className="form-control Input-Style" id="direccionPro" placeholder="Direccion" name="direccionPro" required />
+                                <input onChange={this.onKeyPress('direccionPro')}type="text" className="form-control Input-Style" id="direccionPro" placeholder="Direccion" name="direccionPro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="barrioPro" className="App-subtitulo2">Barrio:</label>
-                                <input type="text" className="form-control Input-Style" id="barrioPro" placeholder="Barrio" name="barrioPro" required />
+                                <input onChange={this.onKeyPress('barrioPro')}type="text" className="form-control Input-Style" id="barrioPro" placeholder="Barrio" name="barrioPro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="codPostalPro" className="App-subtitulo2">Codigo postal:</label>
-                                <input type="number" className="form-control Input-Style" id="codPostalPro" placeholder="Codigo postal" name="codPostalPro" required />
+                                <input onChange={this.onKeyPress('codPostalPro')}type="number" className="form-control Input-Style" id="codPostalPro" placeholder="Codigo postal" name="codPostalPro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="website" className="App-subtitulo2">Estrato:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label for="estrato" className="App-subtitulo2">Estrato:</label>
+                                <input onChange={this.onKeyPress('estrato')} type="text" className="form-control Input-Style" id="estrato" placeholder="URL de tu sitio web" name="estrato" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="website" className="App-subtitulo2">Telefono fijo:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label for="telFijo" className="App-subtitulo2">Telefono fijo:</label>
+                                <input onChange={this.onKeyPress('telFijo')} type="text" className="form-control Input-Style" id="telFijo" placeholder="URL de tu sitio web" name="telFijo" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="website" className="App-subtitulo2">Celular:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label for="celular" className="App-subtitulo2">Celular:</label>
+                                <input onChange={this.onKeyPress('celular')}type="text" className="form-control Input-Style" id="celular" placeholder="URL de tu sitio web" name="celular" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <div className="form-group">
-                                        <button type="button" className="App-button" onClick={this.mostrar2.bind(this)}>Atras</button>
+                                        <button type="button" className="Btn-aceptar" onClick={this.mostrar2.bind(this)}>Atras</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div className="form-group">
-                                        <button type="button" className="App-button" onClick={this.ocultar3.bind(this)}>Siguiente</button>
+                                        <button type="button" className="Btn-aceptar" onClick={this.ocultar3.bind(this)}>Siguiente</button>
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +244,7 @@ class Profesores extends Component {
                         <div id="seccion4">
                             <div className="form-group">
                                 <label for="jornadaPro" className="App-subtitulo2">Jornada Entrenamiento:</label>
-                                <select id="jornadaPro" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('jornadaPro')} id="jornadaPro" className="form-control Input-Style">
                                     <option selected>Elige...</option>
                                     <option>Diurna</option>
                                     <option>Mixta</option>
@@ -210,23 +253,23 @@ class Profesores extends Component {
                             </div>
                             <div className="form-group">
                                 <label for="pasaportePro" className="App-subtitulo2">Pasaporte:</label>
-                                <input type="text" className="form-control Input-Style" id="pasaportePro" placeholder="Pasaporte" name="pasaportePro" required />
+                                <input onChange={this.onKeyPress('pasaportePro')}type="text" className="form-control Input-Style" id="pasaportePro" placeholder="Pasaporte" name="pasaportePro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="libreta" className="App-subtitulo2">Libreta Militar:</label>
-                                <input type="text" className="form-control Input-Style" id="libreta" placeholder="Libreta Militar" name="libreta" required />
+                                <input onChange={this.onKeyPress('libreta')} type="text" className="form-control Input-Style" id="libreta" placeholder="Libreta Militar" name="libreta" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="fotoPro" className="App-subtitulo2">Foto de perfil:</label>
-                                <input type="file" className="form-control Input-Style" id="fotoPro" name="fotoPro" required />
+                                <input onChange={this.onKeyPress('fotoPro')} type="file" className="form-control Input-Style" id="fotoPro" name="fotoPro" required />
                             </div>
                             <div className="form-group">
                                 <label for="tallacPro" className="App-subtitulo2">Talla de camisa:</label>
-                                <select id="gradoPro" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('tallacPro')} id="gradoPro" className="form-control Input-Style">
                                     <option>S</option>
                                     <option>L</option>
                                     <option>M</option>
@@ -234,7 +277,7 @@ class Profesores extends Component {
                             </div>
                             <div className="form-group">
                                 <label for="tallapPro" className="App-subtitulo2">Talla de pantalón:</label>
-                                <select id="tallapPro" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('tallapPro')} id="tallapPro" className="form-control Input-Style">
                                     <option selected>Elige...</option>
                                     <option>S</option>
                                     <option>L</option>
@@ -244,12 +287,12 @@ class Profesores extends Component {
                             <div class="row">
                                 <div class="col">
                                     <div className="form-group">
-                                        <button type="button" className="App-button" onClick={this.mostrar3.bind(this)}>Atras</button>
+                                        <button type="button" className="Btn-aceptar" onClick={this.mostrar3.bind(this)}>Atras</button>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div className="form-group">
-                                        <button type="submit" className="App-button">Enviar</button>
+                                        <button type="submit" className="Btn-aceptar">Enviar</button>
                                     </div>
                                 </div>
                             </div>

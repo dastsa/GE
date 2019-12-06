@@ -26,6 +26,7 @@ class InformacionPersonal extends Component {
                 <div className="container-contact100">
                     <form className="container-contact100" action="">
                         <div className="d-flex flex-wrap">
+                            
                             <div className="form-group">
                                 <button type="button" Style="margin: 20px;" className="Btn-aceptar" onClick={this.seccion1.bind(this)}>Datos personales</button>
                             </div>

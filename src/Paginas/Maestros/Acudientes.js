@@ -4,6 +4,33 @@ import $ from 'jquery';
 import Logo from '../../imagenes/logo20.png'
 
 class Acudientes extends Component {
+
+    state = {
+        tipoDoc: "",
+        nroDoc: "",
+        lugarExp: "",
+        fechaExp: "",
+        nomAcu: "",
+        apeAcu: "",
+        profesionAcu: "",
+        correoAcu: "",
+        direccionAcu: "",
+        barrioAcu: "",
+        codPostalAcu: "",
+        estratoAcu: "",
+        celularAcu: "",
+        telFijoAcu: "",
+    };
+    onKeyPress = field => {
+        return evt => {
+            const val = evt.target.value;
+            const newState = { ...this.state }
+            newState[field] = val;
+            this.setState(newState);
+        }
+    }
+
+
     componentDidMount() {
         $("#seccion1").show();
         $("#seccion2 , #seccion3").hide();
@@ -34,26 +61,28 @@ class Acudientes extends Component {
                         <div id="seccion1">
                             <div className="form-group">
                                 <label for="tipoDocP" className="App-subtitulo2">TIPO DE DOCUMENTO:</label>
-                                <select id="tipoDoc" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('tipoDoc')} id="tipoDoc" className="form-control Input-Style">
                                     <option selected>Elige...</option>
-                                    <option>...</option>
+                                    <option>Tarjeta de identidad</option>
+                                    <option>Cédula de ciudadania</option>
+                                    <option>Cédula de extranjería</option>
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label for="nroIp" className="App-subtitulo2">NUMERO DE DOCUMENTO:</label>
-                                <input type="text" className="form-control Input-Style" id="nroIp" placeholder="Numero de documento de identidad" name="nroIp" required />
+                                <label for="nroDoc" className="App-subtitulo2">NUMERO DE DOCUMENTO:</label>
+                                <input onChange={this.onKeyPress('nroDoc')}type="text" className="form-control Input-Style" id="nroDoc" placeholder="Numero de documento de identidad" name="nroIp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="lugarExp" className="App-subtitulo2">LUGAR DE EXPEDICION:</label>
-                                <input type="text" className="form-control Input-Style" id="lugarExp" placeholder="Ciudad" name="lugarExp" required />
+                                <input onChange={this.onKeyPress('lugarExp')}type="text" className="form-control Input-Style" id="lugarExp" placeholder="Ciudad" name="lugarExp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="fechaExp" className="App-subtitulo2">FECHA DE EXPEDICION:</label>
-                                <input type="date" className="form-control Input-Style" id="fechaExp" name="fechaExp" required />
+                                <input onChange={this.onKeyPress('fechaExp')}type="date" className="form-control Input-Style" id="fechaExp" name="fechaExp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
@@ -68,27 +97,27 @@ class Acudientes extends Component {
                         <div id="seccion2">
                             <div className="form-group">
                                 <label for="nomAcu" className="App-subtitulo2">NOMBRES:</label>
-                                <input type="text" className="form-control Input-Style" id="nomAcu" placeholder="Nombre" name="nomAcu" required />
+                                <input onChange={this.onKeyPress('nomAcu')} type="text" className="form-control Input-Style" id="nomAcu" placeholder="Nombre" name="nomAcu" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="apeAcu" className="App-subtitulo2">APELLIDOS:</label>
-                                <input type="text" className="form-control Input-Style" id="apeAcu" placeholder="Apellidos" name="apeAcu"
+                                <input onChange={this.onKeyPress('apeAcu')} type="text" className="form-control Input-Style" id="apeAcu" placeholder="Apellidos" name="apeAcu"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="profesionAcu " className="App-subtitulo2">PROFESION:</label>
-                                <input type="text" className="form-control Input-Style" id="profesionAcu" placeholder="Profesión" name="profesionAcu"
+                                <input onChange={this.onKeyPress('profesionAcu')} type="text" className="form-control Input-Style" id="profesionAcu" placeholder="Profesión" name="profesionAcu"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label for="ciudadNac" className="App-subtitulo2">CORREO ELECTRONICO:</label>
-                                <input type="email" className="form-control Input-Style" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
+                                <input onChange={this.onKeyPress('ciudadNac')} type="email" className="form-control Input-Style" id="correoAcu" placeholder="Apellidos" name="correoAcu"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
@@ -111,38 +140,38 @@ class Acudientes extends Component {
                         </div>
                         <div id="seccion3">
                             <div className="form-group">
-                                <label for="direccionPro" className="App-subtitulo2">DIRECCION:</label>
-                                <input type="text" className="form-control Input-Style" id="direccionPro" placeholder="Direccion" name="direccionPro" required />
+                                <label for="direccionAcu" className="App-subtitulo2">DIRECCION:</label>
+                                <input onChange={this.onKeyPress('direccionAcu')} type="text" className="form-control Input-Style" id="direccionAcu" placeholder="Direccion" name="direccionAcu" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="barrioPro" className="App-subtitulo2">BARRIO:</label>
-                                <input type="text" className="form-control Input-Style" id="barrioPro" placeholder="Barrio" name="barrioPro" required />
+                                <label for="barrioAcu" className="App-subtitulo2">BARRIO:</label>
+                                <input onChange={this.onKeyPress('barrioAcu')}type="text" className="form-control Input-Style" id="barrioAcu" placeholder="Barrio" name="barrioAcu" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="codPostalPro" className="App-subtitulo2">CODIGO POSTAL:</label>
-                                <input type="number" className="form-control Input-Style" id="codPostalPro" placeholder="Codigo postal" name="codPostalPro" required />
+                                <label for="codPostalAcu" className="App-subtitulo2">CODIGO POSTAL:</label>
+                                <input onChange={this.onKeyPress('codPostalAcu')} type="number" className="form-control Input-Style" id="codPostalAcu" placeholder="Codigo postal" name="codPostalPro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="website" className="App-subtitulo2">ESTRATO:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label for="estratoAcu" className="App-subtitulo2">ESTRATO:</label>
+                                <input type="text" className="form-control Input-Style" id="estratoAcu" placeholder="URL de tu sitio web" name="estratoAcu" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="website" className="App-subtitulo2">TELEFONO FIJO:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label for="telFijoAcu" className="App-subtitulo2">TELEFONO FIJO:</label>
+                                <input onChange={this.onKeyPress('telFijoAcu')}type="text" className="form-control Input-Style" id="telFijoAcu" placeholder="URL de tu sitio web" name="telFijoAcu" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="website" className="App-subtitulo2">CELULAR:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label for="celularAcu" className="App-subtitulo2">CELULAR:</label>
+                                <input onChange={this.onKeyPress('celularAcu')}type="text" className="form-control Input-Style" id="celularAcu" placeholder="URL de tu sitio web" name="celularAcu" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>

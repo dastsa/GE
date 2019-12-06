@@ -3,6 +3,26 @@ import $ from 'jquery';
 
 
 class Escuelas extends Component {
+
+    state = {
+        pais: "",
+        ciudad: "",
+        nit: "",
+        razonsocial: "",
+        logo: "",
+        sitioweb: "",
+        planweb: "",
+
+    };
+    onKeyPress = field => {
+        return evt => {
+            const val = evt.target.value;
+            const newState = { ...this.state }
+            newState[field] = val;
+            this.setState(newState);
+            
+        }
+    }
     componentDidMount() {
         $("#seccion1").show();
         $("#seccion2 , #seccion3").hide();
@@ -32,14 +52,14 @@ class Escuelas extends Component {
                         <div id="seccion1">
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="pais">PAÍS:</label>
-                                <select id="pais" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('pais')}  id="pais" className="form-control Input-Style">
                                     <option selected>Elige...</option>
                                     <option>...</option>
                                 </select>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="ciudad">CIUDAD:</label>
-                                <select id="ciudad" className="form-control Input-Style">
+                                <select onChange={this.onKeyPress('ciudad')} id="ciudad" className="form-control Input-Style">
                                     <option selected>Elige...</option>
                                     <option>...</option>
                                 </select>
@@ -58,20 +78,20 @@ class Escuelas extends Component {
                         <div id="seccion2">
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="nit">NIT:</label>
-                                <input type="text" className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
+                                <input onChange={this.onKeyPress('nit')} type="text" className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="razonsocial">RAZON SOCIAL:</label>
-                                <input type="password" className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
+                                <input onChange={this.onKeyPress('razonsocial')} type="password" className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
                                 <label className="App-subtitulo2" for="file">IMPORTAR LOGO</label>
-                                <input type="file" className="form-control Input-Style" id="file" name="file" />
+                                <input onChange={this.onKeyPress('logo')} type="file" className="form-control Input-Style" id="logo" name="logo" />
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -91,14 +111,14 @@ class Escuelas extends Component {
                         </div>
                         <div id="seccion3">
                             <div className="form-group">
-                                <label className="App-subtitulo2" for="website">SITIO WEB:</label>
-                                <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <label className="App-subtitulo2" for="sitioweb">SITIO WEB:</label>
+                                <input onChange={this.onKeyPress('sitioweb')}  type="text" className="form-control Input-Style" id="sitioweb" placeholder="URL de tu sitio web" name="sitioweb" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label className="App-subtitulo2" for="webplan">PLAN WEB:</label>
-                                <select id="inputState" className="form-control">
+                                <label className="App-subtitulo2" for="planweb">PLAN WEB:</label>
+                                <select onChange={this.onKeyPress('planweb')} id="inputState" className="form-control">
                                     <option selected>Elige un plan...</option>
                                     <option>1 Gratis por 6 meses</option>
                                     <option>2 Basico</option>

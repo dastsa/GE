@@ -6,6 +6,27 @@ import bd from '../bd.json'
 
 class Asistencia extends Component {
 
+    state = {
+        tipoDoc: "",
+        nroDoc: "",
+        lugarExp: "",
+        fechaExp: "",
+        fechaNac: "",
+        nomPro: "",
+        apePro: "",
+        ciudadNac: "",
+        correo: "",
+   
+    };
+    onKeyPress = field => {
+        return evt => {
+            const val = evt.target.value;
+            const newState = { ...this.state }
+            newState[field] = val;
+            this.setState(newState);
+        }
+    }
+
     componentDidMount() {
         $("#selectall").on("click", function () {
             $(".case").prop("checked", this.checked);

@@ -5,6 +5,14 @@ import Escuelas from "./Maestros/Escuelas";
 import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
 import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
 import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
+import PlanearEntrenamiento from "./Profesor/Entrenamiento/PlanearEntrenamiento"
+import Acudientes from "./Maestros/Acudientes";
+import Jugadores from "./Maestros/Jugadores";
+import Profesores from "./Maestros/Profesores";
+import Asistencia from "./Profesor/Entrenamiento/Asistencia";
+import Papeleria from "./Maestros/Papeleria";
+import Tallas from "./Maestros/Tallas";
+import Deportes from "./Maestros/Deportes";
 
 class Page extends Component {
     constructor() {
@@ -16,17 +24,19 @@ class Page extends Component {
             estProfesorAsitencia: false,
         };
     }
+
+
     showAcudientes() {
-        this.setState({ estAcudientes: true, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
     }
     showCategorias() {
-        this.setState({ estAcudientes: false, estCategorias: true, estEscuelas: false, estProfesorAsitencia: false });
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
     }
     showeEscuelas() {
-        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: true, estProfesorAsitencia: false });
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
     }
     showProfesorAsistencia() {
-        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: true });
+        this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
     }
     render() {
         return (
@@ -42,7 +52,7 @@ class Page extends Component {
                 <div className="row">
                     <div className="col-12">
                         <div className="wrapper sticky-top">
-                            <nav id="sidebar" className="sticky-top style-0" Style="overflow-y:scroll; height:600px" >
+                            <aside id="sidebar" className="sticky-top style-0 calcularTamaño"  >
                                 <div className="sidebar-header sticky-top">
                                     <h3 className="App-titulo">Gestion Deportiva</h3>
                                 </div>
@@ -199,7 +209,7 @@ class Page extends Component {
                                     </li>
 
                                 </ul>
-                            </nav>
+                            </aside>
 
                             <div id="content">
                                 <nav className="navbar navbar-expand-lg sticky-top ">
@@ -230,11 +240,12 @@ class Page extends Component {
                                 </nav>
                                 <div className="container-fluid " >
                                     <div className="row" >
-                                        <div className="col-12 style-0 " Style="overflow-y:scroll; height:500px;" >
+                                        <div className="col-12 style-0 calcularTamañoCont" >
                                             {this.state.estAcudientes && <InformacionPersonal />}
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                             {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
+                                            < Jugadores />
                                         </div>
                                     </div>
                                 </div>

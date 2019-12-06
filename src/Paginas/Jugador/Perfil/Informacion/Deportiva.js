@@ -6,12 +6,21 @@ import logo from '../../../../imagenes/logo2.png'
 
 class InformacionDeportiva extends Component {
 
+    componentDidMount() {
+        $("#seccion1").show();
+    };
+
+    seccion1() {
+        $("#seccion1").show();
+    };
+
     render() {
         return (
             <div className="container-fluid">
-                <div className="container-contact100 ">
-                    <form className="container-contact100 " action="">
+                <div className="container-contact100">
+                    <form className="container-contact100" action="">
                         <div className="d-flex flex-wrap">
+
 
                             <div className="row">
 
@@ -102,14 +111,16 @@ class InformacionDeportiva extends Component {
                                         <option>Nocturna</option>
                                     </select>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="form-group">
-                                    <button type="button" Style="margin:20px;" className="Btn-aceptar">Editar información</button>
-                                </div>
+
+                            </div>
+                            <div className="form-group margin">
+                                <button type="button" className="Btn-aceptar margin">Editar información</button>
                             </div>
                         </div>
+
+
+
                     </form>
                 </div>
             </div>
