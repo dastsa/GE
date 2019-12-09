@@ -49,30 +49,30 @@ class Productos extends Component {
 
                         <div id="seccion1">
 
-                                <div className="form-group">
-                                    <label for="pais" className="App-subtitulo2">PAIS:</label>
-                                    <select id="pais" onChange={this.onKeyPress('pais')} className="form-control Input-Style">
+                            <div className="form-group">
+                                <label for="pais" className="App-subtitulo2">PAIS:</label>
+                                <select id="pais" onChange={this.onKeyPress('pais')} className="form-control Input-Style">
                                     {datos.map((data) => {
-                                        return(
+                                        return (
                                             <option>{data.dato}</option>
-                                         );
+                                        );
                                     })}
-                                    </select>
-                                </div>
-                                <div className="form-group">
-                                    <label for="ciudad" className="App-subtitulo2">CIUDAD:</label>
-                                    <select id="ciudad" onChange={this.onKeyPress('ciudad')} className="form-control Input-Style">
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <label for="ciudad" className="App-subtitulo2">CIUDAD:</label>
+                                <select id="ciudad" onChange={this.onKeyPress('ciudad')} className="form-control Input-Style">
                                     {datos.map((data) => {
-                                        return(
+                                        return (
                                             <option>{data.dato}</option>
-                                         );
+                                        );
                                     })}
-                                    </select>
-                                </div>
+                                </select>
+                            </div>
 
                             <div className="form-group">
-                                <button type="button" className="App-button" onClick={this.ocultar.bind(this)}>siguiente</button>
-                            </div>
+                            <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
+                        </div>
 
                             <div className="progress">
                                 <div className="progress-bar Input-Style" Style="width:33%">33%</div>
@@ -80,64 +80,61 @@ class Productos extends Component {
                         </div>
                         <div id="seccion2">
 
-                                <div className="form-group">
-                                    <label for="nit" className="App-subtitulo2">NIT:</label>
-                                    <input type="text" onChange={this.onKeyPress('nit')} className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="razonsocial" className="App-subtitulo2">RAZON SOCIAL:</label>
-                                    <input type="password" onChange={this.onKeyPress('razonS')} className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
-                                        required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="file" className="App-subtitulo2">IMPORTAR LOGO</label>
-                                    <input type="file" onChange={this.onKeyPress('logo')} className="form-control Input-Style" id="file" name="file" />
-                                </div>
-                                <div className="form-group">
-                                    <button type="button" className="App-button" onClick={this.ocultar2.bind(this)}>siguiente</button>
-                                </div>
-                                <div className="progress">
-                                    <div className="progress-bar Input-Style" Style="width:66%">66%</div>
-                                </div>
+                            <div className="form-group">
+                                <label for="nit" className="App-subtitulo2">NIT:</label>
+                                <input type="text" onChange={this.onKeyPress('nit')} className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <button type="button" className="App-button" onClick={this.ocultar2.bind(this)}>siguiente</button>
+                                <label for="razonsocial" className="App-subtitulo2">RAZON SOCIAL:</label>
+                                <input type="password" onChange={this.onKeyPress('razonS')} className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
+                                    required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
+                            <div className="form-group">
+                                <label for="file" className="App-subtitulo2">IMPORTAR LOGO</label>
+                                <input type="file" onChange={this.onKeyPress('logo')} className="form-control Input-Style" id="file" name="file" />
+                            </div>
+                    
+                            <div className="form-group">
+                            <button type="button" className="Btn-aceptar" onClick={this.ocultar2.bind(this)}>Siguiente</button>
+                        </div>
                             <div className="progress">
                                 <div className="progress-bar Input-Style" Style="width:66%">66%</div>
                             </div>
                         
+                       
+                        </div>
+
                         <div id="seccion3">
 
 
-                                <div className="form-group">
-                                    <label for="website" className="App-subtitulo2">SITIO WEB:</label>
-                                    <input type="text" onChange={this.onKeyPress('website')} className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
-                                    <div className="valid-feedback">Validado.</div>
-                                    <div className="invalid-feedback">Por favor rellene este campo.</div>
-                                </div>
-                                <div className="form-group">
-                                    <label for="webplan" className="App-subtitulo2">PLAN WEB:</label>
-                                    <select id="inputState" onChange={this.onKeyPress('webplan')} className="form-control Input-Style">
+                            <div className="form-group">
+                                <label for="website" className="App-subtitulo2">SITIO WEB:</label>
+                                <input type="text" onChange={this.onKeyPress('website')} className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
+                                <div className="valid-feedback">Validado.</div>
+                                <div className="invalid-feedback">Por favor rellene este campo.</div>
+                            </div>
+                            <div className="form-group">
+                                <label for="webplan" className="App-subtitulo2">PLAN WEB:</label>
+                                <select id="inputState" onChange={this.onKeyPress('webplan')} className="form-control Input-Style">
                                     {datos.map((data) => {
-                                        return(
+                                        return (
                                             <option>{data.dato}</option>
-                                         );
+                                        );
                                     })}
-                                        <option>1 Gratis por 6 meses</option>
-                                        <option>2 Basico</option>
-                                        <option>3 Medio</option>
-                                        <option>4 Alto</option>
-                                    </select>
-                                </div>
+                                    <option>1 Gratis por 6 meses</option>
+                                    <option>2 Basico</option>
+                                    <option>3 Medio</option>
+                                    <option>4 Alto</option>
+                                </select>
+                            </div>
 
                             <div className="form-group">
-                                <button type="submit" className="App-button">enviar</button>
-                            </div>
+                            <button type="submit" className="Btn-aceptar" >Enviar</button>
+                        </div>
                             <br />
                             <div className="progress">
                                 <div className="progress-bar Input-Style" Style="width:100%">100%</div>

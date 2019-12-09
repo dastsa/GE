@@ -43,8 +43,10 @@ class Grupos extends Component {
                                 </select>
                             </div>
 
-                            <div className="form-group">
-                                <button type="submit" className="App-button">enviar</button>
+                            <div class="col">
+                                <div className="form-group">
+                                    <button type="submit" className="Btn-aceptar">Enviar</button>
+                                </div>
                             </div>
 
                             <div className="progress">

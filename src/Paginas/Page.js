@@ -1,19 +1,36 @@
 import React, { Component } from "react";
 import $ from 'jquery';
 import Logo from '../imagenes/logo20.png';
-import Escuelas from "./Maestros/Escuelas";
-import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
-import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
 
-import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
-import PlanearEntrenamiento from "./Profesor/Entrenamiento/PlanearEntrenamiento"
+//Maestros
+import Escuelas from "./Maestros/Escuelas";
 import Acudientes from "./Maestros/Acudientes";
 import Jugadores from "./Maestros/Jugadores";
 import Profesores from "./Maestros/Profesores";
-import Asistencia from "./Profesor/Entrenamiento/Asistencia";
 import Papeleria from "./Maestros/Papeleria";
 import Tallas from "./Maestros/Tallas";
 import Deportes from "./Maestros/Deportes";
+import Grupos from "./Maestros/Grupos"
+import Productos from "./Maestros/Productos"
+import Sedes from "./Maestros/Sedes"
+
+
+//Profesor
+import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
+import PlanearEntrenamiento from "./Profesor/Entrenamiento/PlanearEntrenamiento"
+import CategoriaProfesor from "./Profesor/Entrenamiento/Categorias"
+import ProfesorGrupo from "./Profesor/Entrenamiento/Grupo"//falta
+import InformacionProfesor from "./Profesor/Perfil/Informacion"//falta
+import FormacionAcademica from "./Profesor/Perfil/FormacionAcademica"//falta
+
+//Jugador
+import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
+import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
+import EstadoFutbolistico from './Jugador/Avance/EstadoFutbolistico' //falta
+import ParteMedico from './Jugador/Avance/ParteMedico' //falta
+import CategoriaJugador from './Jugador/Perfil/Categoria' //falta
+import PapeleriaJugador from './Jugador/Perfil/Papeleria' //falta
+import Asistencia from "./Profesor/Entrenamiento/Asistencia";
 
 class Page extends Component {
     constructor() {
@@ -40,10 +57,10 @@ class Page extends Component {
         this.setState({ estAcudientes: false, estCategorias: false, estEscuelas: false, estProfesorAsitencia: false });
     }
 
-    componentDidMount(){
-        let height= window.clientHeight;
-        let hn= document.getElementById("headerN").height;
-        $("#sidebar").css({'height':(height-hn-100)+"px"})
+    componentDidMount() {
+        let height = window.clientHeight;
+        let hn = document.getElementById("headerN").height;
+        $("#sidebar").css({ 'height': (height - hn - 100) + "px" })
 
     }
 
@@ -254,7 +271,7 @@ class Page extends Component {
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                             {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
-                                            < Jugadores />
+                                            <Asistencia/>
                                         </div>
                                     </div>
                                 </div>
@@ -262,8 +279,8 @@ class Page extends Component {
                         </div>
                     </div>
                 </div>
-                </div>
-            
+            </div>
+
         );
     }
 }

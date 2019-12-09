@@ -62,20 +62,12 @@ class Acudientes extends Component {
                             <div className="form-group">
                                 <label for="tipoDocP" className="App-subtitulo2">TIPO DE DOCUMENTO:</label>
                                 <select onChange={this.onKeyPress('tipoDoc')} id="tipoDoc" className="form-control Input-Style">
-                                    <option selected>Elige...</option>
-                                    <option>Tarjeta de identidad</option>
-                                    <option>Cédula de ciudadania</option>
-                                    <option>Cédula de extranjería</option>
-                                </select>
-
-                                    <select id="tipoDoc" className="form-control Input-Style">
-                                        {datos.map((data) => {
+                                {datos.map((data) => {
                                             return (
                                                 <option>{data.dato}</option>
                                             );
                                         })}
-                                    </select>
-
+                                </select>
                                     <div className="form-group">
                                         <label for="nroDoc" className="App-subtitulo2">NUMERO DE DOCUMENTO:</label>
                                         <input onChange={this.onKeyPress('nroDoc')} type="text" className="form-control Input-Style" id="nroDoc" placeholder="Numero de documento de identidad" name="nroIp" required />
@@ -101,6 +93,7 @@ class Acudientes extends Component {
                                     <div className="progress">
                                         <div className="progress-bar Input-Style" Style="width:33%">33%</div>
                                     </div>
+                                </div>
                                 </div>
                                 <div id="seccion2">
                                     <div className="form-group">
@@ -199,7 +192,7 @@ class Acudientes extends Component {
                                         <div className="progress-bar Input-Style" Style="width:100%">100%</div>
                                     </div>
                                 </div>
-                                </div>
+                               
                             </form>
                             </div>
                             </div>
