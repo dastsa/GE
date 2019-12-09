@@ -271,7 +271,7 @@ class Page extends Component {
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                             {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
-                                            <PapeleriaProfesor/>
+                                            <ParteMedico/>
                                         </div>
                                     </div>
                                 </div>

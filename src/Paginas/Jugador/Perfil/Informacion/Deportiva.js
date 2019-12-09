@@ -2,17 +2,9 @@ import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
 //import Acudientes from "./SubAcudientes";
-import logo from '../../../../imagenes/logo2.png'
 
 class InformacionDeportiva extends Component {
 
-    componentDidMount() {
-        $("#seccion1").show();
-    };
-
-    seccion1() {
-        $("#seccion1").show();
-    };
 
     render() {
         return (
@@ -114,10 +106,13 @@ class InformacionDeportiva extends Component {
 
 
                             </div>
-                            <div className="form-group margin">
-                                <button type="button" className="Btn-aceptar margin">Editar información</button>
-                            </div>
+                           
                         </div>
+                        <div className="row container-fluid">
+                                <div className="form-group margin">
+                                    <button type="button" className="Btn-aceptar margin">Editar información</button>
+                                </div>
+                            </div>
 
 
 

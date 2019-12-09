@@ -493,6 +493,10 @@ a.article, a.article:hover {
   margin-left: 15px;
 }
 
+.margin2{
+  margin:15px;
+}
+
 
 
 
@@ -622,14 +626,16 @@ div.page li {
 
 
 .textinput {
-
-  resize: both;
   overflow: auto;
-  width: 80%;
-  min-height: 200px;
-  outline: none;
-  resize: none;
-  
+  max-width: 500px;
+  height: 300px;
+  width: 300px;
+  max-height: 500px;
+  min-height: 100%;
+  min-width: 100%;
+  margin:2px;
+  padding: 2px;
+
 }
 
 .calcularTamaño {

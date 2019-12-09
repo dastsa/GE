@@ -42,19 +42,19 @@ class PapeleriaProfesor extends Component {
                             <input onChange={this.onKeyPress('cerPro')} type="file" className="form-control Input-Style margin" id="cerPro" name="cerPro" required />
                         </div>
                         <div className="form-group margin">
-                            <label className="App-subtitulo2" htmlFor="cerPro">CERTIFICADO PROFESIONAL 2</label>
+                            <label className="App-subtitulo2" htmlFor="cerPro">EXPERIENCIA LABORAL</label>
                             <input onChange={this.onKeyPress('cerPro')} type="file" className="form-control Input-Style margin" id="cerPro" name="cerPro" />
                         </div>
                         <div className="form-group margin">
-                            <label className="App-subtitulo2" htmlFor="cerPro">CERTIFICADO PROFESIONAL 3</label>
+                            <label className="App-subtitulo2" htmlFor="cerPro">CAJA DE COMPENSACIÓN</label>
                             <input onChange={this.onKeyPress('cerPro')} type="file" className="form-control Input-Style margin" id="cerPro" name="cerPro" />
                         </div>
                         <div className="form-group margin">
-                            <label className="App-subtitulo2" htmlFor="cerMedico">CERTIFICADO MEDICO</label>
+                            <label className="App-subtitulo2" htmlFor="cerMedico">CERTIFICADO MEDICO O EPS</label>
                             <input onChange={this.onKeyPress('cerMedico')} type="file" className="form-control Input-Style margin" id="cerMedico" name="cerMedico" />
                         </div>
                         <div className="form-group margin">
-                            <label className="App-subtitulo2" htmlFor="pasaporte">PASAPORTE</label>
+                            <label className="App-subtitulo2" htmlFor="pasaporte">ARL</label>
                             <input onChange={this.onKeyPress('pasaporte')} type="file" className="form-control Input-Style margin" id="pasaporte" name="pasaporte" />
                         </div>
                         <div className="form-group">
