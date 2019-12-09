@@ -32,7 +32,7 @@ class Loggin extends Component {
         <div className="row">
           <div className="col-12">
             <header className="py-3 bg-image-full fondo" >
-              <img class="img-fluid d-block mx-auto" src={Logo} alt="" />
+              <img className="img-fluid d-block mx-auto" src={Logo} alt="" />
             </header>
           </div>
         </div>

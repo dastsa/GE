@@ -81,7 +81,7 @@ class Asistencia extends Component {
                                             return (
                                                 <tr data-test="event-row" className="bg-light">
                                                     <td>{data.nombre}</td>
-                                                    <td><input type="checkbox" class="case checkstyle" /></td>
+                                                    <td><input type="checkbox" className="case checkstyle" /></td>
 
                                                 </tr>
                                             );

@@ -482,7 +482,6 @@ class Jugadores extends Component {
                                 </div>
                     </form>
                         </div>
-              
             </div>
 
 

@@ -23,19 +23,19 @@ class Grupos extends Component {
     }
     render() {
         return (
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <div className="container-contact100 ">
 
                     <form className="container-contact100 " action="">
                         <div id="seccion1">
                             <div className="form-group">
-                                <label for="anioG" className="App-subtitulo2">AÑO :</label>
+                                <label htmlFor="anioG" className="App-subtitulo2">AÑO :</label>
                                 <input type="number" onChange={this.onKeyPress('año')} className="form-control Input-Style" id="anioG" placeholder="Año" name="anioG" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label for="jugador" className="App-subtitulo2">JUGADOR:</label>
+                                <label htmlFor="jugador" className="App-subtitulo2">JUGADOR:</label>
                                 <select id="jugador" onChange={this.onKeyPress('jugador')} className="form-control Input-Style">
                                     <option selected>Elige un Jugador...</option>
                                     <option>Elige...</option>
@@ -43,7 +43,7 @@ class Grupos extends Component {
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div className="col">
                                 <div className="form-group">
                                     <button type="submit" className="Btn-aceptar">Enviar</button>
                                 </div>

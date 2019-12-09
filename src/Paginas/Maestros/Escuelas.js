@@ -51,7 +51,7 @@ class Escuelas extends Component {
 
                     <div id="seccion1">
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="pais">PAÍS:</label>
+                            <label className="App-subtitulo2" htmlFor="pais">PAÍS:</label>
                             <select id="pais" className="form-control Input-Style">
                                 {datos.map((data) => {
                                     return (
@@ -61,7 +61,7 @@ class Escuelas extends Component {
                             </select>
                         </div>
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="ciudad">CIUDAD:</label>
+                            <label className="App-subtitulo2" htmlFor="ciudad">CIUDAD:</label>
                             <select id="ciudad" className="form-control Input-Style">
                                 {datos.map((data) => {
                                     return (
@@ -71,7 +71,7 @@ class Escuelas extends Component {
                             </select>
                         </div>
 
-                        <div class="col">
+                        <div className="col">
                             <div className="form-group">
                                 <button type="button" className="Btn-aceptar" onClick={this.ocultar.bind(this)}>Siguiente</button>
                             </div>
@@ -84,29 +84,29 @@ class Escuelas extends Component {
 
                     <div id="seccion2">
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="nit">NIT:</label>
+                            <label className="App-subtitulo2" htmlFor="nit">NIT:</label>
                             <input onChange={this.onKeyPress('nit')} type="text" className="form-control Input-Style" id="nit" placeholder="NIT de tu escuela" name="nit" required />
                             <div className="valid-feedback">Validado.</div>
                             <div className="invalid-feedback">Por favor rellene este campo.</div>
                         </div>
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="razonsocial">RAZON SOCIAL:</label>
+                            <label className="App-subtitulo2" htmlFor="razonsocial">RAZON SOCIAL:</label>
                             <input onChange={this.onKeyPress('razonsocial')} type="password" className="form-control Input-Style" id="razonsocial" placeholder="Nombre de tu Escuela" name="razonsocial"
                                 required />
                             <div className="valid-feedback">Validado.</div>
                             <div className="invalid-feedback">Por favor rellene este campo.</div>
                         </div>
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="file">IMPORTAR LOGO</label>
+                            <label className="App-subtitulo2" htmlFor="file">IMPORTAR LOGO</label>
                             <input onChange={this.onKeyPress('logo')} type="file" className="form-control Input-Style" id="logo" name="logo" />
                         </div>
-                        <div class="row">
-                            <div class="col">
+                        <div className="row">
+                            <div className="col">
                                 <div className="form-group">
                                     <button type="button" className="Btn-aceptar" onClick={this.mostrar.bind(this)}>Atrás</button>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 <div className="form-group">
                                     <button type="button" className="Btn-aceptar" onClick={this.ocultar2.bind(this)}>Siguiente</button>
                                 </div>
@@ -120,13 +120,13 @@ class Escuelas extends Component {
                     </div>
                     <div id="seccion3">
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="website">SITIO WEB:</label>
+                            <label className="App-subtitulo2" htmlFor="website">SITIO WEB:</label>
                             <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
                             <div className="valid-feedback">Validado.</div>
                             <div className="invalid-feedback">Por favor rellene este campo.</div>
                         </div>
                         <div className="form-group">
-                            <label className="App-subtitulo2" for="webplan">PLAN WEB:</label>
+                            <label className="App-subtitulo2" htmlFor="webplan">PLAN WEB:</label>
                             <select id="inputState" className="form-control">
                                 {datos.map((data) => {
                                     return (
@@ -139,14 +139,14 @@ class Escuelas extends Component {
                                 <option>4 Alto</option>
                             </select>
                         </div>
-                        <div class="row">
+                        <div className="row">
 
-                            <div class="col">
+                            <div className="col">
                                 <div className="form-group">
                                     <button type="button" className="Btn-aceptar" onClick={this.mostrar2.bind(this)}>Atras</button>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div className="col">
                                 <div className="form-group">
                                     <button type="submit" className="Btn-aceptar">Enviar</button>
                                 </div>

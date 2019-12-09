@@ -43,7 +43,7 @@ class Categorias extends Component {
                     <div className="container-contact100">
                         <form className='col-' action="">
                             <div className="form-group">
-                                <label for="generoCat" className="App-subtitulo2">GENERO DE LA CATEGORÍA:</label>
+                                <label htmlFor="generoCat" className="App-subtitulo2">GENERO DE LA CATEGORÍA:</label>
                                 <select id="generoCat" onChange={this.onKeyPress('generoCat')} className="Input-Style form-control form-group">
                                 {datos.map((data) => {
                                         return(
@@ -54,7 +54,7 @@ class Categorias extends Component {
                             </div>
 
                             <div className="form-group">
-                                <label for="edad" className="App-subtitulo2">EDAD DE LA CATEGORÍA:</label>
+                                <label htmlFor="edad" className="App-subtitulo2">EDAD DE LA CATEGORÍA:</label>
                                 <select id="edad" onChange={this.onKeyPress('edad')} className="Input-Style form-control form-group">
                                 {datos.map((data) => {
                                         return(
@@ -65,7 +65,7 @@ class Categorias extends Component {
                             </div>
 
                             <div className="form-group">
-                                <label for="dias" className="App-subtitulo2">DÍAS DE ENTRENAMIENTO:</label>
+                                <label htmlFor="dias" className="App-subtitulo2">DÍAS DE ENTRENAMIENTO:</label>
                                 <select id="dias" onChange={this.onKeyPress('dias')} className="Input-Style form-control form-group">
                                 {datos.map((data) => {
                                         return(
@@ -76,17 +76,17 @@ class Categorias extends Component {
                             </div>
 
                             <div className="form-group">
-                                <label for="horasEntre" className="App-subtitulo2">HORA DE ENTRENAMIENTO:</label>
+                                <label htmlFor="horasEntre" className="App-subtitulo2">HORA DE ENTRENAMIENTO:</label>
                                 <div className="row">
                                     <div className="col">
                                         <div className="form-group">
-                                            <label for="horaIni" className="App-subtitulo2">HORA DE INICIO:</label>
+                                            <label htmlFor="horaIni" className="App-subtitulo2">HORA DE INICIO:</label>
                                             <input type="time" onChange={this.onKeyPress('horaIni')} className="Input-Style form-control form-group" id="horaIni" placeholder="Hora Inicio" name="horaIni" />
                                         </div>
                                     </div>
                                     <div className="col">
                                         <div className="form-group">
-                                            <label for="horaFin" className="App-subtitulo2">HORA FINAL:</label>
+                                            <label htmlFor="horaFin" className="App-subtitulo2">HORA FINAL:</label>
                                             <input type="time" onChange={this.onKeyPress('horaFin')} className="Input-Style form-control form-group" id="horaFin" placeholder="Hora Final" name="horaFin" />
                                         </div>
                                     </div>

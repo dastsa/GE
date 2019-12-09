@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import $ from 'jquery';
 
 
-class Papeleria extends Component {
-
+class PapeleriaProfesor extends Component {
 
     state = {
-       
     };
     onKeyPress = field => {
         return evt => {
@@ -40,8 +38,16 @@ class Papeleria extends Component {
                             <input onChange={this.onKeyPress('regCivil')} type="file" className="form-control Input-Style margin" id="regCivil" name="regCivil" required />
                         </div>
                         <div className="form-group margin">
-                            <label className="App-subtitulo2" htmlFor="cerEstudiantil">CERTIFICADO ESTUDIANTIL</label>
-                            <input onChange={this.onKeyPress('cerEstudiantil')} type="file" className="form-control Input-Style margin" id="cerEstudiantil" name="cerEstudiantil" required />
+                            <label className="App-subtitulo2" htmlFor="cerPro">CERTIFICADO PROFESIONAL</label>
+                            <input onChange={this.onKeyPress('cerPro')} type="file" className="form-control Input-Style margin" id="cerPro" name="cerPro" required />
+                        </div>
+                        <div className="form-group margin">
+                            <label className="App-subtitulo2" htmlFor="cerPro">CERTIFICADO PROFESIONAL 2</label>
+                            <input onChange={this.onKeyPress('cerPro')} type="file" className="form-control Input-Style margin" id="cerPro" name="cerPro" />
+                        </div>
+                        <div className="form-group margin">
+                            <label className="App-subtitulo2" htmlFor="cerPro">CERTIFICADO PROFESIONAL 3</label>
+                            <input onChange={this.onKeyPress('cerPro')} type="file" className="form-control Input-Style margin" id="cerPro" name="cerPro" />
                         </div>
                         <div className="form-group margin">
                             <label className="App-subtitulo2" htmlFor="cerMedico">CERTIFICADO MEDICO</label>
@@ -65,4 +71,4 @@ class Papeleria extends Component {
         );
     }
 }
-export default Papeleria;
+export default PapeleriaProfesor;

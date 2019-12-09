@@ -19,17 +19,17 @@ import Sedes from "./Maestros/Sedes"
 import ProfesorAsistencia from "./Profesor/Entrenamiento/Asistencia"
 import PlanearEntrenamiento from "./Profesor/Entrenamiento/PlanearEntrenamiento"
 import CategoriaProfesor from "./Profesor/Entrenamiento/Categorias"
-import ProfesorGrupo from "./Profesor/Entrenamiento/Grupo"//falta
-import InformacionProfesor from "./Profesor/Perfil/Informacion"//falta
+import ProfesorGrupo from "./Profesor/Entrenamiento/Grupo"//falta esperar
+import InformacionProfesor from "./Profesor/Perfil/Informacion"
 import FormacionAcademica from "./Profesor/Perfil/FormacionAcademica"//falta
+import PapeleriaProfesor from "./Profesor/Perfil/Papeleria"
 
 //Jugador
 import InformacionPersonal from "./Jugador/Perfil/Informacion/Personal";
 import InformacionDeportiva from "./Jugador/Perfil/Informacion/Deportiva";
 import EstadoFutbolistico from './Jugador/Avance/EstadoFutbolistico' //falta
-import ParteMedico from './Jugador/Avance/ParteMedico' //falta
-import CategoriaJugador from './Jugador/Perfil/Categoria' //falta
-import PapeleriaJugador from './Jugador/Perfil/Papeleria' //falta
+import ParteMedico from './Jugador/Avance/ParteMedico' //falta por definir
+import PapeleriaJugador from './Jugador/Perfil/Papeleria'
 import Asistencia from "./Profesor/Entrenamiento/Asistencia";
 
 class Page extends Component {
@@ -271,7 +271,7 @@ class Page extends Component {
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                             {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
-                                            <Asistencia/>
+                                            <PapeleriaProfesor/>
                                         </div>
                                     </div>
                                 </div>

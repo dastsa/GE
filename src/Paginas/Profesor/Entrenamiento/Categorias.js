@@ -17,7 +17,7 @@ class Categorias extends Component{
                             return (
                                 <div>
 
-                                    <img class="" Style="border: 30px solid transparent;" src={Logo} alt="" />
+                                    <img className="" Style="border: 30px solid transparent;" src={Logo} alt="" />
                                     <p>{data.nombre}</p>
                                 </div>
                             );

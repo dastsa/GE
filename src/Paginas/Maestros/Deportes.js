@@ -19,7 +19,7 @@ class Deportes extends Component {
 
     render() {
         return (
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <div className="container-contact100 ">
 
                     <form className="container-contact100 " action="">
@@ -27,7 +27,7 @@ class Deportes extends Component {
 
                         <div>
                         <div className="form-group">
-                                <label for="nombreDep" className="App-subtitulo2">NOMBRE:</label>
+                                <label htmlFor="nombreDep" className="App-subtitulo2">NOMBRE:</label>
                                 <input onChange={this.onKeyPress('nombreDep')}type="text" className="form-control Input-Style" id="nombreDep" placeholder="Nombre deporte" name="nombreDep" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
@@ -35,7 +35,7 @@ class Deportes extends Component {
 
 
                             <div className="form-group">
-                                <label for="estado" className="App-subtitulo2">ESTADO:</label>
+                                <label htmlFor="estado" className="App-subtitulo2">ESTADO:</label>
                                 <select onChange={this.onKeyPress('tipoDoc')} id="estado" className="form-control Input-Style">
                                     <option selected>Elige...</option>
                                     <option>Visible</option>
