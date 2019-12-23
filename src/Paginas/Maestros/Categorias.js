@@ -80,7 +80,7 @@ class Categorias extends Component {
                                 <div className="row">
                                     <div className="col">
                                         <div className="form-group">
-                                            <label htmlFor="horaIni" className="App-subtitulo2">HORA DE INICIO:</label>
+                                            <label htmlFor="horaIni" className="App-subtitulo2">HORA INICIO:</label>
                                             <input type="time" onChange={this.onKeyPress('horaIni')} className="Input-Style form-control form-group" id="horaIni" placeholder="Hora Inicio" name="horaIni" />
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ class Categorias extends Component {
                         
 
                             <div className="form-group">
-                                <button className="Btn-aceptar" onClick={this.mostrar()} type="submit"></button>
+                                <button className="Btn-aceptar" onClick={this.mostrar()} type="submit">Guardar</button>
                             </div>
                         </form>
                     </div>

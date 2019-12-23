@@ -36,9 +36,9 @@
 .App-titulo{
   color: white;
   margin-top: 10%;
-  font: small-caps normal 400 16px/22px Verdana;
+  font: small-caps normal 400 16px/27px Verdana;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 170%;
 }
 .App-subtitulo{
   color: white;
@@ -50,7 +50,7 @@
 
 .App-subtitulo2{
   color: white;
-  margin-top: 4%;
+  margin-top: 6%;
   font: small-caps normal 400 16px/22px Verdana;
   font-weight: bold;
   font-size: 100%;
@@ -85,6 +85,15 @@
   height: 40px;
   width: 210px;
   background-repeat: no-repeat;
+  background-size: contain;
+  border-color: #787511;
+  margin-top: 20px;
+}
+
+.Btn-aceptar2{
+  background-image: url('./imagenes/aceptarlogin.png');
+  height: 40px;
+  width: 210px;
   background-size: contain;
   border-color: #787511;
   margin-top: 20px;
@@ -467,6 +476,7 @@ a.article, a.article:hover {
 .scroll-permanent{
   overflow-y: scroll;
 }
+
 .style-0::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: transparent;
@@ -486,7 +496,6 @@ a.article, a.article:hover {
 .content{
   height:500px;
   overflow:auto;
-  
 }
 
 .margin{
@@ -497,7 +506,11 @@ a.article, a.article:hover {
   margin:15px;
 }
 
+.margin3{
+  margin-bottom: 33px;
+  margin-top: 14px;
 
+}
 
 
 
@@ -593,11 +606,7 @@ ul.tabs li {
   padding: 3px 10px 0 10px;
   border: 1px solid #DDDDDD;
   background: #EFEFEF;
-  
-  
   display: inline-block;
-  
- 
   border-top-left-radius: 6px; 
   border-top-right-radius: 6px;
 }
@@ -627,25 +636,52 @@ div.page li {
 
 .textinput {
   overflow: auto;
-  max-width: 500px;
-  height: 300px;
-  width: 300px;
-  max-height: 500px;
-  min-height: 100%;
-  min-width: 100%;
+  height: 200px;
+  width: 210px;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 20%;
+  min-width: 50%;
   margin:2px;
   padding: 2px;
 
 }
+.textinput2 {
+  overflow: auto;
+  height: 340px;
+  width: 300px;
+  resize: horizontal;
+  overflow: auto;
+  max-height: 500px;
+  max-width: 500px;
+  min-height: 20%;
+  min-width: 50%;
+  margin:2px;
+  padding: 2px;
+
+}
+.textinput3{
+  overflow: auto;
+  height: 300px;
+  width: 290px;
+  max-height: 300px;
+  max-width: 290px;
+  min-height: 20%;
+  min-width: 50%;
+  margin:2px;
+  padding: 2px;
+}
 
 .calcularTamaño {
-  max-height: calc(95vh - 8rem);
+  max-height: calc(103vh - 8rem);
   overflow-y: auto;
 }
 
 .calcularTamañoCont {
-  max-height: calc(65vh - 8rem);
+  max-height: calc(83vh - 8rem);
   overflow-y: auto;
 }
 
-
+.inputstyle{
+  background-color: white;
+}

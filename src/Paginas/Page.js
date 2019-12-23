@@ -32,6 +32,10 @@ import ParteMedico from './Jugador/Avance/ParteMedico' //falta por definir
 import PapeleriaJugador from './Jugador/Perfil/Papeleria'
 import Asistencia from "./Profesor/Entrenamiento/Asistencia";
 
+//Admin
+import EscuelasAdmin from "./Admin/Escuelas"
+import SedesAdmin from "./Admin/Sedes"
+
 class Page extends Component {
     constructor() {
         super();
@@ -70,7 +74,7 @@ class Page extends Component {
                 <div className="row">
                     <div className="col-12">
                         <header className="py-1 bg-image-full fondo" id="headerN" >
-                            <img class="img-fluid d-block mx-auto" src={Logo} alt="" />
+                            <img className="img-fluid d-block mx-auto" src={Logo} alt="" />
                         </header>
                     </div>
                 </div>
@@ -162,6 +166,7 @@ class Page extends Component {
                                 </ul>
 
                                 <ul className="list-unstyled components">
+
                                     <p>Administrador</p>
                                     <li className="active">
                                         <a href="#equiposAdministrador" data-toggle="collapse" aria-expanded="false" >Jugadores</a>
@@ -271,7 +276,7 @@ class Page extends Component {
                                             {this.state.estCategorias && <InformacionDeportiva />}
                                             {this.state.estEscuelas && <Escuelas />}
                                             {this.state.estProfesorAsitencia && <ProfesorAsistencia />}
-                                            <ParteMedico/>
+                                            <InformacionDeportiva />
                                         </div>
                                     </div>
                                 </div>

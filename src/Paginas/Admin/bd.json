@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "nombre": "Sede Guarne",
+        "direccion":"13#13-14",
+        "jornada":"AM"
+    },
+    {
+        "id": "2",
+        "nombre": "Sede Envigado",
+        "direccion":"23#43-14",
+        "jornada":"PM"
+    },
+    {
+        "id": "3",
+        "nombre": "Sede Itaguí",
+        "direccion":"55#53-14",
+        "jornada":"AM"
+    },
+    {
+        "id": "4",
+        "nombre": "Sede Sabaneta",
+        "direccion":"23#23-14",
+        "jornada":"AM"
+    }
+]

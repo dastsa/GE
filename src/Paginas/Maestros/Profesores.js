@@ -87,7 +87,7 @@ class Profesores extends Component {
                     <form className="container-contact100 " action="">
                         <div id="seccion1">
                             <div className="form-group">
-                                <label htmlFor="tipoDoc" className="App-subtitulo2">Tipo de documento:</label>
+                                <label htmlFor="tipoDoc" className="App-subtitulo2">TIPO DE DOCUMENTO:</label>
                                 <select onChange={this.onKeyPress('tipoDoc')} id="tipoDoc" className="form-control Input-Style">
                                     {datos.map((data) => {
                                         return (
@@ -97,25 +97,25 @@ class Profesores extends Component {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="nroDoc" className="App-subtitulo2">Nro de documento:</label>
+                                <label htmlFor="nroDoc" className="App-subtitulo2">NRO DE DOCUMENTO:</label>
                                 <input onChange={this.onKeyPress('nroDoc')} type="text" className="form-control Input-Style" id="nroDoc" placeholder="Numero de documento de identidad" name="nroDoc" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="lugarExp" className="App-subtitulo2">Lugar de expedición:</label>
+                                <label htmlFor="lugarExp" className="App-subtitulo2">LUGAR DE EXPEDICIÓN:</label>
                                 <input onChange={this.onKeyPress('lugarExp')} type="text" className="form-control Input-Style" id="lugarExp" placeholder="Ciudad" name="lugarExp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fechaExp" className="App-subtitulo2">Fecha de expedición:</label>
+                                <label htmlFor="fechaExp" className="App-subtitulo2">FECHA DE EXPEDICIÓN:</label>
                                 <input onChange={this.onKeyPress('fechaExp')} type="date" className="form-control Input-Style" id="fechaExp" name="fechaExp" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fechaNac" className="App-subtitulo2">Fecha de nacimiento:</label>
+                                <label htmlFor="fechaNac" className="App-subtitulo2">FECHA DE NACIMIENTO:</label>
                                 <input onChange={this.onKeyPress('fechaNac')} type="date" className="form-control Input-Style" id="fechaNac" name="fechaNac" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
@@ -129,27 +129,27 @@ class Profesores extends Component {
                         </div>
                         <div id="seccion2">
                             <div className="form-group">
-                                <label htmlFor="nomPro" className="App-subtitulo2">Nombres:</label>
+                                <label htmlFor="nomPro" className="App-subtitulo2">NOMBRES:</label>
                                 <input onChange={this.onKeyPress('nomPro')} type="text" className="form-control Input-Style" id="nomPro" placeholder="Nombre" name="nomPro" required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="apePro" className="App-subtitulo2">Apellidos:</label>
+                                <label htmlFor="apePro" className="App-subtitulo2">APELLIDOS:</label>
                                 <input onChange={this.onKeyPress('apePro')} type="text" className="form-control Input-Style" id="apePro" placeholder="Apellidos" name="apePro"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="ciudadNac" className="App-subtitulo2">Ciudad de nacimiento:</label>
+                                <label htmlFor="ciudadNac" className="App-subtitulo2">CIUDAD DE NACIMIENTO:</label>
                                 <input onChange={this.onKeyPress('ciudadNac')} type="text" className="form-control Input-Style" id="ciudadNac" placeholder="Apellidos" name="ciudadNac"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
                                 <div className="invalid-feedback">Por favor rellene este campo.</div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="correo" className="App-subtitulo2">Correo electronico:</label>
+                                <label htmlFor="correo" className="App-subtitulo2">CORREO ELECTRONICO:</label>
                                 <input onChange={this.onKeyPress('correo')} type="email" className="form-control Input-Style" id="correo" placeholder="Apellidos" name="correo"
                                     required />
                                 <div className="valid-feedback">Validado.</div>
@@ -193,37 +193,37 @@ class Profesores extends Component {
 
                             <div id="seccion3">
                                 <div className="form-group">
-                                    <label htmlFor="direccionPro" className="App-subtitulo2">Direccion:</label>
+                                    <label htmlFor="direccionPro" className="App-subtitulo2">DIRECCIÓN:</label>
                                     <input onChange={this.onKeyPress('direccionPro')} type="text" className="form-control Input-Style" id="direccionPro" placeholder="Direccion" name="direccionPro" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="barrioPro" className="App-subtitulo2">Barrio:</label>
+                                    <label htmlFor="barrioPro" className="App-subtitulo2">BARRIO:</label>
                                     <input onChange={this.onKeyPress('barrioPro')} type="text" className="form-control Input-Style" id="barrioPro" placeholder="Barrio" name="barrioPro" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="codPostalPro" className="App-subtitulo2">Codigo postal:</label>
+                                    <label htmlFor="codPostalPro" className="App-subtitulo2">CÓDIGO POSTAL:</label>
                                     <input onChange={this.onKeyPress('codPostalPro')} type="number" className="form-control Input-Style" id="codPostalPro" placeholder="Codigo postal" name="codPostalPro" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="estrato" className="App-subtitulo2">Estrato:</label>
+                                    <label htmlFor="estrato" className="App-subtitulo2">ESTRATO:</label>
                                     <input onChange={this.onKeyPress('estrato')} type="text" className="form-control Input-Style" id="estrato" placeholder="URL de tu sitio web" name="estrato" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="telFijo" className="App-subtitulo2">Telefono fijo:</label>
+                                    <label htmlFor="telFijo" className="App-subtitulo2">TELÉFONO FIJO:</label>
                                     <input onChange={this.onKeyPress('telFijo')} type="text" className="form-control Input-Style" id="telFijo" placeholder="URL de tu sitio web" name="telFijo" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="celular" className="App-subtitulo2">Celular:</label>
+                                    <label htmlFor="celular" className="App-subtitulo2">CELULAR:</label>
                                     <input onChange={this.onKeyPress('celular')} type="text" className="form-control Input-Style" id="celular" placeholder="URL de tu sitio web" name="celular" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
@@ -246,7 +246,7 @@ class Profesores extends Component {
                             </div>
                             <div id="seccion4">
                                 <div className="form-group">
-                                    <label htmlFor="jornadaPro" className="App-subtitulo2">Jornada Entrenamiento:</label>
+                                    <label htmlFor="jornadaPro" className="App-subtitulo2">JORNADA ENTRENAMIENTO:</label>
                                     <select onChange={this.onKeyPress('jornadaPro')} id="jornadaPro" className="form-control Input-Style">
                                         {datos.map((data) => {
                                             return (
@@ -256,23 +256,23 @@ class Profesores extends Component {
                                     </select>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="pasaportePro" className="App-subtitulo2">Pasaporte:</label>
+                                    <label htmlFor="pasaportePro" className="App-subtitulo2">PASAPORTE:</label>
                                     <input onChange={this.onKeyPress('pasaportePro')} type="text" className="form-control Input-Style" id="pasaportePro" placeholder="Pasaporte" name="pasaportePro" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="libreta" className="App-subtitulo2">Libreta Militar:</label>
+                                    <label htmlFor="libreta" className="App-subtitulo2">LIBRETA MILITAR:</label>
                                     <input onChange={this.onKeyPress('libreta')} type="text" className="form-control Input-Style" id="libreta" placeholder="Libreta Militar" name="libreta" required />
                                     <div className="valid-feedback">Validado.</div>
                                     <div className="invalid-feedback">Por favor rellene este campo.</div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="fotoPro" className="App-subtitulo2">Foto de perfil:</label>
+                                    <label htmlFor="fotoPro" className="App-subtitulo2">FOTO DE PERFIL:</label>
                                     <input onChange={this.onKeyPress('fotoPro')} type="file" className="form-control Input-Style" id="fotoPro" name="fotoPro" required />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="tallacPro" className="App-subtitulo2">Talla de camisa:</label>
+                                    <label htmlFor="tallacPro" className="App-subtitulo2">TALLA DE CAMISA:</label>
                                     <select onChange={this.onKeyPress('tallacPro')} id="gradoPro" className="form-control Input-Style">
                                         {datos.map((data) => {
                                             return (
@@ -282,7 +282,7 @@ class Profesores extends Component {
                                     </select>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="tallapPro" className="App-subtitulo2">Talla de pantalón:</label>
+                                    <label htmlFor="tallapPro" className="App-subtitulo2">TALLA DE PANTALÓN:</label>
                                     <select onChange={this.onKeyPress('tallapPro')} id="tallapPro" className="form-control Input-Style">
                                         {datos.map((data) => {
                                             return (

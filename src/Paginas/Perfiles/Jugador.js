@@ -1,20 +1,18 @@
+// @packages
 import React, { Component } from "react";
 
-class Jugador extends Component{
-    constructor() {
-        super();
-        this.state = {
-            estAcudientes: false,
-            estCategorias: false,
-            estEscuelas: false,
-            estP:true
-        };
-    }
-    showAcudientes() {
-        this.setState({ estAcudientes: true, estCategorias: false, estEscuelas: false});
-    }
-    render(){
-        return(
+class Jugador extends Component {
+    render() {
+        const {
+            onShowJpersonal,
+            onShowJdeportiva,
+            onShowJpapeleria,
+            onShowJparteMedico,
+            onShowJestadoFut,
+        
+        } = this.props;
+
+        return (
             <div>
                 <p>Jugador</p>
 
@@ -22,24 +20,35 @@ class Jugador extends Component{
                     <a href="#perfilJugador" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Perfil</a>
                     <ul className="collapse list-unstyled" id="perfilJugador">
                         <li>
-                            <a href="#" onClick={this.showAcudientes.bind(this)}>Información</a>
+                            <a href="#info" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Información</a>
+                            <ul id="info">
+
+                                <li>
+                                    <a href="#" onClick={onShowJpersonal}>Personal</a>
+                                </li>
+                                <li>
+                                    <a href="#" onClick={onShowJdeportiva}>Deportiva</a>
+                                </li>
+
+                            </ul>
+
                         </li>
+
+
                         <li>
-                            <a href="#">Papelería</a>
+                            <a href="#" onClick={onShowJpapeleria}>Papelería</a>
                         </li>
-                        <li>
-                            <a href="#">Categoría</a>
-                        </li>
+               
                     </ul>
                 </li>
                 <li className="active">
                     <a href="#avanceJugador" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Avance</a>
                     <ul className="collapse list-unstyled" id="avanceJugador">
                         <li>
-                            <a href="#">Parte medico</a>
+                            <a href="#" onClick={onShowJparteMedico}>Parte medico</a>
                         </li>
                         <li>
-                            <a href="#">Estado Futbolistico</a>
+                            <a href="#" onClick={onShowJestadoFut}>Estado Futbolistico</a>
                         </li>
                     </ul>
                 </li>

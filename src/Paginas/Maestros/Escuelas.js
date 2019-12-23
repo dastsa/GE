@@ -8,9 +8,11 @@ class Escuelas extends Component {
     state = {
         pais: "",
         ciudad: "",
+        deporte: "",
         nit: "",
         razonsocial: "",
         logo: "",
+        dirFisica: "",
         sitioweb: "",
         planweb: "",
 
@@ -70,6 +72,16 @@ class Escuelas extends Component {
                                 })}
                             </select>
                         </div>
+                        <div className="form-group">
+                            <label className="App-subtitulo2" htmlFor="ciudad">DEPORTE:</label>
+                            <select id="deporte" className="form-control Input-Style">
+                                {datos.map((data) => {
+                                    return (
+                                        <option>{data.dato}</option>
+                                    );
+                                })}
+                            </select>
+                        </div>
 
                         <div className="col">
                             <div className="form-group">
@@ -96,10 +108,39 @@ class Escuelas extends Component {
                             <div className="valid-feedback">Validado.</div>
                             <div className="invalid-feedback">Por favor rellene este campo.</div>
                         </div>
-                        <div className="form-group">
-                            <label className="App-subtitulo2" htmlFor="file">IMPORTAR LOGO</label>
-                            <input onChange={this.onKeyPress('logo')} type="file" className="form-control Input-Style" id="logo" name="logo" />
+
+                        <div className="form-group margin">
+                            <label className="App-subtitulo2" htmlFor="razonsocial">LOGO:</label>
+                            <button type="button" className="form-control Input-Style" data-toggle="modal"
+                                data-target="#Modal">Añadir logo de escuela</button>
+
+                            <div className="modal fade" data-backdrop="false" data-dismiss="modal" id="Modal" role="dialog" aria-labelledby="ModalLabel"
+                                aria-hidden="false">
+                                <div className="modal-dialog" role="document">
+                                    <div className="modal-content" Style="background: #26262C;">
+
+                                        <div className="modal-header">
+                                            <h5 className="modal-title" Style="color: white;" id="ModalLabel">Añadir logo de la empresa</h5>
+                                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <div className="modal-body">
+                                            <div className="form-group margin">
+                                                <label className="App-subtitulo2" htmlFor="file">IMPORTAR LOGO</label>
+                                                <input onChange={this.onKeyPress('logo')} type="file" className="form-control Input-Style" id="logo" name="logo" />
+                                            </div>
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="Btn-aceptar" data-dismiss="modal">Cerrar</button>
+                                            <button type="button" className="Btn-aceptar   ">Guardar cambios</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="row">
                             <div className="col">
                                 <div className="form-group">
@@ -120,6 +161,12 @@ class Escuelas extends Component {
                     </div>
                     <div id="seccion3">
                         <div className="form-group">
+                            <label className="App-subtitulo2" htmlFor="dirFisica">DIRECCIÓN FISICA:</label>
+                            <input type="text" className="form-control Input-Style" id="dirFisica" placeholder="Dirección física" name="dirFisica" required />
+                            <div className="valid-feedback">Validado.</div>
+                            <div className="invalid-feedback">Por favor rellene este campo.</div>
+                        </div>
+                        <div className="form-group">
                             <label className="App-subtitulo2" htmlFor="website">SITIO WEB:</label>
                             <input type="text" className="form-control Input-Style" id="website" placeholder="URL de tu sitio web" name="website" required />
                             <div className="valid-feedback">Validado.</div>
@@ -127,7 +174,7 @@ class Escuelas extends Component {
                         </div>
                         <div className="form-group">
                             <label className="App-subtitulo2" htmlFor="webplan">PLAN WEB:</label>
-                            <select id="inputState" className="form-control">
+                            <select id="inputState" className="form-control Input-Style">
                                 {datos.map((data) => {
                                     return (
                                         <option>{data.dato}</option>
